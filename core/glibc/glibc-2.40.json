@@ -1,0 +1,21 @@
+{
+    "pkgname": "glibc",
+    "version": "2.40",
+    "source": "https://ftp.gnu.org/gnu/glibc/glibc-2.40.tar.xz"
+    "patches": "https://www.linuxfromscratch.org/patches/lfs/12.2/glibc-2.40-fhs-1.patch"
+    "build": [
+        "patch -Np1 -i ../glibc-2.40-fhs-1.patch",
+        "mkdir -v build",
+        "cd       build",
+        "echo 'rootsbindir=/usr/sbin' > configparms",
+        "../configure --prefix=/usr --disable-werror --enable-kernel=4.19 --enable-stack-protector=strong --disable-nscd libc_cv_slibdir=/usr/lib",
+        "make",
+        "make check",
+        "grep 'Timed out' $(find -name \*.out)",
+        "touch /etc/ld.so.conf",
+        "sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile",
+        "make install",
+        "sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd",
+        "need to find links for next steps"
+    ]
+}
