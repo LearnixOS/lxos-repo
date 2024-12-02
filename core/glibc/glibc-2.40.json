@@ -16,6 +16,9 @@
         "sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile",
         "make install",
         "sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd",
-        "need to find links for next steps"
+        "wget https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/glibc/files/locales.sh | /bin/sh",
+        "wget https://github.com/LearnixOS/lxos-repo/blob/main/core/glibc/files/nsswitch.conf > /etc/nsswitch.conf",
+        "wget https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/glibc/files/glibctzdata.sh | /bin/sh",
+        "wget https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/glibc/files/ld.so.conf > /etc/ld.so.conf"
     ]
 }
