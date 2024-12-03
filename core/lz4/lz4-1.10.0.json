@@ -1,0 +1,11 @@
+{
+    "pkgname": "lz4"
+    "version": "1.10.0",
+    "source": ["https://github.com/lz4/lz4/releases/download/v1.10.0/lz4-1.10.0.tar.gz"],
+    "build": [
+        "tar -xvf lz4-1.10.0.tar.gz",
+        "cd lz4-1.10.0",
+        "make BUILD_STATIC=no PREFIX=/usr",
+        "make BUILD_STATIC=no PREFIX=/usr install"
+    ]
+}
