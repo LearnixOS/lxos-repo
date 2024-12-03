@@ -1,0 +1,12 @@
+{
+    "pkgname": "psmisc",
+    "version": "23.7",
+    "source": ["https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.7.tar.xz"],
+    "build": [
+        "tar -xvf psmisc-23.7.tar.xz",
+        "cd psmisc-23.7",
+        "./configure --prefix=/usr",
+        "make",
+        "make install"
+    ]
+}

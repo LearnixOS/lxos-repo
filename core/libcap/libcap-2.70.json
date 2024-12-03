@@ -1,0 +1,12 @@
+{
+    "pkgname": "libcap",
+    "version": "2.70",
+    "source": ["https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.70.tar.xz"],
+    "build": [
+        "tar -xvf libcap-2.70.tar.xz",
+        "cd libcap-2.70.tar.xz",
+        "sed -i '/install -m.*STA/d' libcap/Makefile",
+        "make prefix=/usr lib=lib",
+        "make prefix=/usr lib=lib install"
+    ]
+}
