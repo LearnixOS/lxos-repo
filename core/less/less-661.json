@@ -1,0 +1,12 @@
+{
+    "pkgname": "less",
+    "version": "661",
+    "source": ["https://www.greenwoodsoftware.com/less/less-661.tar.gz"],
+    "build": [
+        "tar -xvf less-661.tar.gz",
+        "cd less-661",
+        "./configure --prefix=/usr --sysconfdir=/etc",
+        "make",
+        "make install"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "pkgname": "ninja",
+    "version": "1.12.1",
+    "source": "https://github.com/ninja-build/ninja/archive/v1.12.1/ninja-1.12.1.tar.gz",
+    "build": [
+        "tar -xvf ninja-1.12.1.tar.gz",
+        "cd ninja-1.12.1",
+        "wget https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/ninja/files/sed.sh | /bin/sh",
+        "python3 configure.py --bootstrap",
+        "install -vm755 ninja /usr/bin/",
+        "install -vDm644 misc/bash-completion /usr/share/bash-completion/completions/ninja",
+        "install -vDm644 misc/zsh-completion  /usr/share/zsh/site-functions/_ninja"
+
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "pkgname": "autoconf",
+    "version": "2.72",
+    "source": ["https://ftp.gnu.org/gnu/autoconf/autoconf-2.72.tar.xz"],
+    "build": [
+        "tar -xvf autoconf-2.72.tar.xz",
+        "cd autoconf-2.72.tar.xz",
+        "./configure --prefix=/usr",
+        "make",
+        "make install"
+    ]
+}

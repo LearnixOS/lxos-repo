@@ -1,0 +1,12 @@
+{
+    "pkgname": "gdbm",
+    "version": "1.24",
+    "source": ["https://ftp.gnu.org/gnu/gdbm/gdbm-1.24.tar.gz"],
+    "build": [
+        "tar -xvf gdbm-1.24.tar.gz",
+        "cd gdbm-1.24",
+        "./configure --prefix=/usr --disable-static --enable-libgdbm-compat",
+        "make",
+        "make install",
+    ]
+}

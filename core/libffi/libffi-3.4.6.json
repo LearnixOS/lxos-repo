@@ -1,0 +1,12 @@
+{
+    "pkgname": "libffi",
+    "version": "3.4.6",
+    "source": ["https://github.com/libffi/libffi/releases/download/v3.4.6/libffi-3.4.6.tar.gz"],
+    "build": [
+        "tar -xvf libffi-3.4.6.tar.gz",
+        "cd libffi-3.4.6.tar.gz",
+        "./configure --prefix=/usr --disable-static --with-gcc-arch=native",
+        "make",
+        "make install"
+    ]
+}
