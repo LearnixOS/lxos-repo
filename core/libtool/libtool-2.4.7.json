@@ -3,7 +3,6 @@
     "version": "2.4.7",
     "source": ["https://ftp.gnu.org/gnu/libtool/libtool-2.4.7.tar.xz"],
     "build": [
-        "tar -xvf libtool-2.4.7.tar.xz",
         "cd libtool-2.4.7",
         "./configure --prefix=/usr",
         "make",

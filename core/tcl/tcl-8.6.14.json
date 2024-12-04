@@ -3,7 +3,6 @@
     "version": "8.6.14",
     "source": ["https://downloads.sourceforge.net/tcl/tcl8.6.14-src.tar.gz"],
     "build": [
-        "tar -xvf tcl8.6.14-src.tar.gz",
         "cd tcl8.6.14",
         "SRCDIR=$(pwd)",
         "cd unix",
@@ -11,7 +10,7 @@
         "make",
         "sed -e 's|$SRCDIR/unix|/usr/lib|' -e 's|$SRCDIR|/usr/include|' -i tclConfig.sh",
         "sed -e 's|$SRCDIR/unix/pkgs/tdbc1.1.7|/usr/lib/tdbc1.1.7|' -e 's|$SRCDIR/pkgs/tdbc1.1.7/generic|/usr/include|' -e 's|$SRCDIR/pkgs/tdbc1.1.7/library|/usr/lib/tcl8.6|' -e 's|$SRCDIR/pkgs/tdbc1.1.7|/usr/include|' -i pkgs/tdbc1.1.7/tdbcConfig.sh",
-        "sed -e 's|$SRCDIR/unix/pkgs/itcl4.2.4|/usr/lib/itcl4.2.4|' -e 's|$SRCDIR/pkgs/itcl4.2.4/generic|/usr/include|' -e 's|$SRCDIR/pkgs/itcl4.2.4|/usr/include|' -i pkgs/itcl4.2.4/itclConfig.sh"
+        "sed -e 's|$SRCDIR/unix/pkgs/itcl4.2.4|/usr/lib/itcl4.2.4|' -e 's|$SRCDIR/pkgs/itcl4.2.4/generic|/usr/include|' -e 's|$SRCDIR/pkgs/itcl4.2.4|/usr/include|' -i pkgs/itcl4.2.4/itclConfig.sh",
         "unset SRCDIR",
         "make install",
         "chmod -v u+w /usr/lib/libtcl8.6.so",

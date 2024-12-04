@@ -1,0 +1,17 @@
+{
+    "pkgname": "coreutils",
+    "version": "9.5",
+    "source": ["https://ftp.gnu.org/gnu/coreutils/coreutils-9.5.tar.xz"],
+    "patches": ["https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/coreutils/files/coreutils-9.5-i18n-2.patch"],
+    "build": [
+        "cd coreutils-9.5",
+        "autoreconf -fiv",
+        "FORCE_UNSAFE_CONFIGURE=1 ./configure --prefix=/usr --enable-no-install-program=kill,uptime",
+        "make",
+        "make install",
+        "mv -v /usr/bin/chroot /usr/sbin",
+        "mv -v /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8",
+
+        "wget https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/coreutils/files/sed.sh | /bin/sh"]
+    ]
+}

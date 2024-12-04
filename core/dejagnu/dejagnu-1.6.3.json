@@ -3,7 +3,6 @@
     "version": "1.6.3",
     "source": ["https://ftp.gnu.org/gnu/dejagnu/dejagnu-1.6.3.tar.gz"],
     "build": [
-        "tar -xvf dejagnu-1.6.3.tar.gz",
         "cd dejagnu-1.6.3",
         "mkdir -v build",
         "cd build",

@@ -3,7 +3,6 @@
     "version": "0.22.5",
     "source": ["https://ftp.gnu.org/gnu/gettext/gettext-0.22.5.tar.xz"],
     "build": [
-        "tar -xvf gettext-0.22.5.tar.xz",
         "cd gettext-0.22.5",
         "./configure --prefix=/usr --disable-static --docdir=/usr/share/doc/gettext-0.22.5",
         "make",

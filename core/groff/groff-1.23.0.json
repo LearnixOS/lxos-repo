@@ -1,0 +1,13 @@
+{
+    "pkgname": "groff",
+    "version": "1.23.0",
+    "source": ["https://ftp.gnu.org/gnu/groff/groff-1.23.0.tar.gz"],
+    "build": [
+        "cd groff-1.23.0",
+        "PAGE=letter ./configure --prefix=/usr",
+        "make",
+        "make install"
+
+
+    ]
+}

@@ -3,7 +3,6 @@
     "version": "2.3.0",
     "source": ["https://distfiles.ariadne.space/pkgconf/pkgconf-2.3.0.tar.xz"],
     "build": [
-        "tar -xvf pkgconf-2.3.0.tar.xz",
         "cd pkgconf-2.3.0",
         "./configure --prefix=/usr --disable-static --docdir=/usr/share/doc/pkgconf-2.3.0",
         "make",

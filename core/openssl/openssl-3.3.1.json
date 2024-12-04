@@ -3,7 +3,6 @@
     "version": "3.3.1",
     "source": ["https://www.openssl.org/source/openssl-3.3.1.tar.gz"],
     "build": [
-        "tar -xvf openssl-3.3.1.tar.gz",
         "cd openssl-3.3.1",
         "./config --prefix=/usr --openssldir=/etc/ssl --libdir=lib shared zlib-dynamic",
         "make",

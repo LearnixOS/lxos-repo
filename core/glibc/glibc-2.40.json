@@ -1,12 +1,10 @@
 {
     "pkgname": "glibc",
     "version": "2.40",
-    "source": "https://ftp.gnu.org/gnu/glibc/glibc-2.40.tar.xz"
-    "patches": "https://www.linuxfromscratch.org/patches/lfs/12.2/glibc-2.40-fhs-1.patch"
+    "source": "https://ftp.gnu.org/gnu/glibc/glibc-2.40.tar.xz",
+    "patches": "https://www.linuxfromscratch.org/patches/lfs/12.2/glibc-2.40-fhs-1.patch",
     "build": [
-        "tar -xvf glibc-2.40.tar.xz",
         "cd glibc-2.40",
-        "patch -Np1 -i ../glibc-2.40-fhs-1.patch",
         "mkdir -v build",
         "cd       build",
         "echo 'rootsbindir=/usr/sbin' > configparms",

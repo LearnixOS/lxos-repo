@@ -3,7 +3,6 @@
     "version": "5.40.0",
     "source": ["https://www.cpan.org/src/5.0/perl-5.40.0.tar.xz"],
     "build": [
-        "tar -xvf perl-5-40-0.tar.xz",
         "cd perl-5.40.0",
         "export BUILD_ZLIB=False",
         "export BUILD_BZIP2=0",

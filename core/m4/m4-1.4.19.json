@@ -3,7 +3,6 @@
     "version": "1.4.19",
     "source": ["https://ftp.gnu.org/gnu/m4/m4-1.4.19.tar.xz"],
     "build": [
-        "tar -xvf m4-1.4.19.tar.xz",
         "cd tar -xvf m4-1.4.19",
         "./configure --prefix=/usr",
         "make",

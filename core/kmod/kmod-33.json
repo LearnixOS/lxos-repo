@@ -3,7 +3,6 @@
     "version": "33",
     "source": ["https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-33.tar.xz"],
     "build": [
-        "tar -xvf kmod-33.tar.xz",
         "cd kmod-33",
         "./configure --prefix=/usr --sysconfdir=/etc --with-openssl --with-xz --with-zstd --with-zlib --disable-manpages",
         "make",

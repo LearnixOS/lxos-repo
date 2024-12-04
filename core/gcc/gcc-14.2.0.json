@@ -3,7 +3,6 @@
     "version": "14.2.0",
     "source": "https://ftp.gnu.org/gnu/gcc/gcc-14.2.0/gcc-14.2.0.tar.xz",
     "build": [
-        "tar -xvf gcc-14.2.0.tar.xz",
         "cd gcc-14.2.0.tar.xz",
         "wget https://github.com/LearnixOS/lxos-repo/blob/main/core/gcc/files/x86_64.sh | /bin/sh",
         "mkdir build",
