@@ -1,7 +1,7 @@
 {
     "pkgname": "binutils",
     "version": "2.43.1",
-    "source": "https://sourceware.org/pub/binutils/releases/binutils-2.43.1.tar.xz",
+    "source": ["https://sourceware.org/pub/binutils/releases/binutils-2.43.1.tar.xz"],
     "build": [
         "cd binutils-2.43.1.tar.xz",
         "mkdir -v build",

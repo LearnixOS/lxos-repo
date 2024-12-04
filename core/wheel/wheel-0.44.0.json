@@ -1,7 +1,7 @@
 {
     "pkgname": "wheel",
     "version": "0.44.0",
-    "source": "https://pypi.org/packages/source/w/wheel/wheel-0.44.0.tar.gz",
+    "source": ["https://pypi.org/packages/source/w/wheel/wheel-0.44.0.tar.gz"],
     "build": [
         "cd wheel-0.44.0",
         "pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD",

@@ -1,7 +1,7 @@
 {
     "pkgname": "efivar",
     "version": "39",
-    "source": "https://github.com/rhboot/efivar/archive/39/efivar-39.tar.gz",
+    "source": ["https://github.com/rhboot/efivar/archive/39/efivar-39.tar.gz"],
     "build": [
         "cd efivar-39",
         "make",

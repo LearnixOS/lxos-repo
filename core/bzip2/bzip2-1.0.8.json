@@ -1,8 +1,8 @@
 {
     "pkgname": "bzip2",
     "version": "1.0.8",
-    "source": "https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
-    "patches": "https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/bzip2/files/bzip2-1.0.8-install_docs-1.patch",
+    "source": ["https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz"],
+    "patches": ["https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/bzip2/files/bzip2-1.0.8-install_docs-1.patch"],
     "build": [
         "cd bzip2-1.0.8",
         "sed -i 's@\(ln -s -f \)$(PREFIX)/bin/@\1@' Makefile",

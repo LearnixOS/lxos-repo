@@ -1,7 +1,7 @@
 {
     "pkgname": "grep",
     "version": "3.11",
-    "source": "https://ftp.gnu.org/gnu/grep/grep-3.11.tar.xz",
+    "source": ["https://ftp.gnu.org/gnu/grep/grep-3.11.tar.xz"],
     "build": [
         "cd grep-3.11",
         "sed -i 's/echo/#echo/' src/egrep.sh",
