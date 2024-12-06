@@ -14,6 +14,8 @@
         "grep 'Timed out' $(find -name \*.out)",
         "touch /etc/ld.so.conf",
         "sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile",
+        "make DESTDIR=$PWD/dest install",
+        "install -vm755 dest/usr/lib/*.so.* /usr/lib",
         "make install",
         "sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd",
         "wget https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/glibc/files/locales.sh | /bin/sh",
