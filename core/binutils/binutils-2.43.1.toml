@@ -4,7 +4,7 @@ name = "binutils"
 version = "2.43.1"
 author = "saladtoes"
 type = "curl"
-src = ["https://sourceware.org/pub/binutils/releases/binutils-2.43.1.tar.xz"],
+src = ["https://sourceware.org/pub/binutils/releases/binutils-2.43.1.tar.xz"]
 
 [build]
 

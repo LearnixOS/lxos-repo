@@ -4,7 +4,7 @@ name = "e2fsprogs"
 version = "1.47.1"
 author = "saladtoes"
 type = "curl"
-src = ["https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.47.1/e2fsprogs-1.47.1.tar.gz"],
+src = ["https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.47.1/e2fsprogs-1.47.1.tar.gz"]
 
 [build]
 

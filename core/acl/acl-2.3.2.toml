@@ -1,7 +1,7 @@
 [package]
 
 name = "acl"
-version = "2.3.2",
+version = "2.3.2"
 author = "saladtoes"
 type = "curl"
 src = ["https://download.savannah.gnu.org/releases/acl/acl-2.3.2.tar.xz"]

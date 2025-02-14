@@ -4,7 +4,7 @@ name = "dbus"
 version = "1.14.10"
 author = "saladtoes"
 type = "curl"
-src =  ["https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz"],
+src =  ["https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz"]
 
 [build]
 

@@ -4,7 +4,7 @@ name = "flit-core"
 version = "3.9.0"
 author = "saladtoes"
 type = "curl"
-src = ["https://pypi.org/packages/source/f/flit-core/flit_core-3.9.0.tar.gz"],
+src = ["https://pypi.org/packages/source/f/flit-core/flit_core-3.9.0.tar.gz"]
 
 [build]
 
