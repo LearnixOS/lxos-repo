@@ -1,0 +1,19 @@
+[package]
+
+name = "gettext"
+version = "0.22.5"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/gettext/gettext-0.22.5.tar.xz"],
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr --disable-static --docdir=/usr/share/doc/gettext-0.22.5",
+        "make",
+]
+
+install = [
+        "make install",
+        "chmod -v 0755 /usr/lib/preloadable_libintl.so"
+]

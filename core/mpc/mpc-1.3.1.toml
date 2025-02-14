@@ -1,0 +1,21 @@
+[package]
+
+name = "mpc"
+version = "1.3.1"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/mpc/mpc-1.3.1.tar.gz"]
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr --disable-static --docdir=/usr/share/doc/mpc-1.3.1",
+        "make",
+        "make html"
+]
+
+install = [
+        "make install",
+        "make install-html"
+]
+

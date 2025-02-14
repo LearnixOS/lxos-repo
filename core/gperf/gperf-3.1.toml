@@ -1,0 +1,18 @@
+[package]
+
+name = "gperf"
+version = "3.1"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/gperf/gperf-3.1.tar.gz"],
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr --docdir=/usr/share/doc/gperf-3.1",
+        "make",
+]
+
+install = [
+        "make install"
+]

@@ -1,0 +1,20 @@
+
+[package]
+
+name = "grep"
+version = "3.11"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/grep/grep-3.11.tar.xz"],
+
+[build]
+
+compile = [
+        "sed -i 's/echo/#echo/' src/egrep.sh",
+        "./configure --prefix=/usr",
+]
+
+install = [
+        "make",
+        "make install"
+]

@@ -1,0 +1,19 @@
+[package]
+
+name = "kmod"
+version = "33"
+author = "saladtoes"
+type = "curl"
+src = ["https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-33.tar.xz"]
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr --sysconfdir=/etc --with-openssl --with-xz --with-zstd --with-zlib --disable-manpages",
+        "make"
+]
+
+install = [
+        "make install",
+        "wget https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/kmod/files/symlink.sh | /bin/sh"
+]

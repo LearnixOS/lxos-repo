@@ -1,0 +1,16 @@
+[package]
+name = "libffi"
+version = "3.4.6"
+author = "saladtoes"
+type = "curl"
+src = ["https://github.com/libffi/libffi/releases/download/v3.4.6/libffi-3.4.6.tar.gz"]
+
+[build]
+compile = [
+        "./configure --prefix=/usr --disable-static --with-gcc-arch=native",
+        "make"
+	]
+
+install = [
+"make install"
+]

@@ -1,0 +1,19 @@
+[package]
+
+name = "psmisc"
+version = "23.7"
+author = "saladtoes"
+type = "curl"
+src = ["https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.7.tar.xz"]
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr",
+        "make"
+]
+
+install = [
+	"make install"
+]
+

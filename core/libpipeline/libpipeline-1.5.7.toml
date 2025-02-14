@@ -1,0 +1,19 @@
+
+[package]
+
+name = "libpipeline"
+version = "1.5.7"
+author = "saladtoes"
+type = "curl"
+src = ["https://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.7.tar.gz"]
+
+[build]
+compile = [
+        "tar -xvf libpipeline-1.5.7",
+        "./configure --prefix=/usr",
+        "make"
+	]
+
+install = [
+        "make install"
+	]

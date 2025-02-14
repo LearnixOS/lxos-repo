@@ -1,0 +1,16 @@
+[package]
+name = "man-db"
+version = "2.12.1"
+author = "saladtoes"
+type = "curl"
+src = ["https://download.savannah.gnu.org/releases/man-db/man-db-2.12.1.tar.xz"]
+
+[build]
+compile = [ 
+        "./configure --prefix=/usr --docdir=/usr/share/doc/man-db-2.12.1 --sysconfdir=/etc --disable-setuid --enable-cache-owner=bin --with-browser=/usr/bin/lynx --with-vgrind=/usr/bin/vgrind --with-grap=/usr/bin/grap ",
+        "make"
+]
+
+install = [
+        "make install"
+]

@@ -1,0 +1,15 @@
+[package]
+name = "make"
+version = "4.4.1"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/make/make-4.4.1.tar.gz,"]
+
+[build]
+compile = [
+        "./configure --prefix=/usr",
+        "make"
+]
+install = [
+        "make install"
+]

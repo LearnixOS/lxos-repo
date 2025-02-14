@@ -1,0 +1,24 @@
+    
+
+[package]
+
+name = "mpfr"
+version = "4.2.1"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/mpfr/mpfr-4.2.1.tar.xz"]
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr --disable-static --enable-thread-safe --docdir=/usr/share/doc/mpfr-4.2.1",
+        "make",
+        "make html",
+        "make check",
+]
+
+install = [
+        "make install",
+        "make install-html"
+]
+

@@ -1,0 +1,19 @@
+[package]
+
+name = "bc"
+version = "6.7.6"
+author = "saladtoes"
+type = "curl" 
+src = ["https://github.com/gavinhoward/bc/releases/download/6.7.6/bc-6.7.6.tar.xz"]
+
+
+[build]
+
+compile = [
+        "CC=gcc ./configure --prefix=/usr -G -O3 -r",
+        "make"
+]
+
+install = [
+	"make install"
+]

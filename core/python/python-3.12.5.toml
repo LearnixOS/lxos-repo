@@ -1,0 +1,24 @@
+
+[package]
+
+name = "python"
+version = "3.12.5"
+author = "saladtoes"
+type = "curl"
+src = ["https://www.python.org/ftp/python/3.12.5/Python-3.12.5.tar.xz"]
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr --enable-shared --with-system-expat --enable-optimizations",
+        "make"
+]
+
+install = [
+        "make install",
+        "wget https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/python/files/pip.sh | /bin/sh",
+        "install -v -dm755 /usr/share/doc/python-3.12.5/html",
+        "tar --no-same-owner -xvf ../python-3.12.5-docs-html.tar.bz2",
+        "cp -R --no-preserve=mode python-3.12.5-docs-html/* /usr/share/doc/python-3.12.5/html"
+]
+

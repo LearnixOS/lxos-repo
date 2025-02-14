@@ -1,0 +1,21 @@
+[package]
+
+name = "freetype"
+version = "2.13.2"
+author = "saladtoes"
+type = "curl"
+src = ["https://downloads.sourceforge.net/freetype/freetype-2.13.3.tar.xz"]
+
+[build]
+
+compile = [
+	"wget https://downloads.sourceforge.net/freetype/freetype-doc-2.13.3.tar.xz"
+        "tar -xf freetype-doc-2.13.3.tar.xz --strip-components=2 -C docs",
+        "wget https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/freetype/files/sed.sh | /bin/sh",
+]
+
+install = [
+        "make install",
+        "cp -v -R docs -T /usr/share/doc/freetype-2.13.3 ",
+        "rm -v /usr/share/doc/freetype-2.13.3/freetype-config.1"
+]

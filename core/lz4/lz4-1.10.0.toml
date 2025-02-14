@@ -1,0 +1,14 @@
+[package]
+name = "lz4"
+version = "1.10.0"
+author = "saladtoes"
+type = "curl"
+src = ["https://github.com/lz4/lz4/releases/download/v1.10.0/lz4-1.10.0.tar.gz"]
+
+[build]
+compile = [
+        "make BUILD_STATIC=no PREFIX=/usr"
+	]
+install = [
+        "make BUILD_STATIC=no PREFIX=/usr install"
+	]

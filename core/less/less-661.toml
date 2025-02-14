@@ -1,0 +1,16 @@
+[package]
+
+name = "less"
+version = "661"
+author = "saladtoes"
+type = "curl"
+src = ["https://www.greenwoodsoftware.com/less/less-661.tar.gz"]
+
+[build]
+compile = [
+        "./configure --prefix=/usr --sysconfdir=/etc",
+        "make"
+]
+install = [
+        "make install"
+]

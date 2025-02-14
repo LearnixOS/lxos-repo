@@ -1,0 +1,25 @@
+[package]
+
+name = "efibootmgr"
+version = "18"
+author = "saladtoes"
+type = "curl"
+src = ["https://github.com/rhboot/efibootmgr/archive/18/efibootmgr-18.tar.gz"]
+
+[build]
+
+compile = [
+        "make EFIDIR=LXOS EFI_LOADER=grubx64.efi"
+]
+
+install = [
+        "make install EFIDIR=LXOS"
+]
+
+[extra]
+
+deps = [
+	"efivar-39",
+	"popt-1.19"
+]
+

@@ -1,0 +1,17 @@
+[package]
+
+name = "autoconf"
+version = "2.72"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/autoconf/autoconf-2.72.tar.xz"]
+
+[build]
+compile = [
+        "./configure --prefix=/usr",
+        "make"
+]
+
+install = [
+    "make install"
+    ]

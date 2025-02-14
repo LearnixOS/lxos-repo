@@ -1,0 +1,16 @@
+
+[package]
+name = "man-pages"
+version = "6.9.1"
+author = "saladtoes"
+type = "curl"
+src = ["https://www.kernel.org/pub/linux/docs/man-pages/man-pages-6.9.1.tar.xz"]
+
+[build]
+compile = [ 
+"rm man3/crypt*"
+]
+
+install = [
+        "make prefix=/usr install"
+]

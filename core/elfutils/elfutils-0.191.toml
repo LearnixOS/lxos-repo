@@ -1,0 +1,23 @@
+[package]
+
+name = "elfutils"
+version = "0.191"
+author = "saladtoes"
+type = "curl"
+src = ["https://sourceware.org/ftp/elfutils/0.191/elfutils-0.191.tar.bz2"]
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr --disable-debuginfod --enable-libdebuginfod=dummy",
+        "make"
+]
+
+install = [
+        "make -C libelf install",
+        "install -vm644 config/libelf.pc /usr/lib/pkgconfig",
+        "rm /usr/lib/libelf.a"
+]
+
+
+

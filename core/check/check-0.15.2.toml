@@ -1,0 +1,19 @@
+[package]
+
+name = "check"
+version = "0.15.2"
+author = "saladtoes"
+type = "curl"
+src = ["https://github.com/libcheck/check/releases/download/0.15.2/check-0.15.2.tar.gz"]
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr --disable-static",
+        "make"
+]
+
+install = [
+        "make docdir=/usr/share/doc/check-0.15.2 install"
+]
+

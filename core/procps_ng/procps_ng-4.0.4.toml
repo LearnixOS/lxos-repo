@@ -1,0 +1,19 @@
+[package]
+
+name = "procps-ng"
+version = "4.0.4"
+author = "saladtoes"
+type = "curl"
+src = ["https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.4.tar.xz"]
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr --docdir=/usr/share/doc/procps-ng-4.0.4 --disable-static --disable-kill --with-systemd",
+        "make src_w_LDADD='$(LDADD) -lsystemd'"
+]
+
+install = [
+	"make install"
+]
+

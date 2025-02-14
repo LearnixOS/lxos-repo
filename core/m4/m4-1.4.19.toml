@@ -1,0 +1,15 @@
+[package]
+name = "m4"
+version = "1.4.19"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/m4/m4-1.4.19.tar.xz"]
+
+[build]
+compile = [
+        "./configure --prefix=/usr",
+        "make"
+]
+install = [
+        "make install"
+]

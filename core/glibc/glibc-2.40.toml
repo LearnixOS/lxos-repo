@@ -1,0 +1,34 @@
+[package]
+
+name = "glibc"
+version = "2.40"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/glibc/glibc-2.40.tar.xz"]
+
+[patches]
+
+patches = [
+"https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/glibc/files/glibc-2.40-fhs-1.patch"
+]
+
+[build]
+
+compile = [
+        "mkdir -v build",
+        "cd       build",
+        "echo 'rootsbindir=/usr/sbin' > configparms",
+        "../configure --prefix=/usr --disable-werror --enable-kernel=4.19 --enable-stack-protector=strong --disable-nscd libc_cv_slibdir=/usr/lib",
+        "make"
+]
+
+install = [
+        "make DESTDIR=$PWD/dest install",
+        "install -vm755 dest/usr/lib/*.so.* /usr/lib",
+        "make install",
+        "sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd",
+        "wget https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/glibc/files/locales.sh | /bin/sh",
+        "wget https://github.com/LearnixOS/lxos-repo/blob/main/core/glibc/files/nsswitch.conf > /etc/nsswitch.conf",
+        "wget https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/glibc/files/glibctzdata.sh | /bin/sh",
+        "wget https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/glibc/files/ld.so.conf > /etc/ld.so.conf"
+]

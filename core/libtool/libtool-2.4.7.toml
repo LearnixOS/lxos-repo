@@ -1,0 +1,19 @@
+
+[package]
+name = "libtool"
+version = "2.4.7"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/libtool/libtool-2.4.7.tar.xz"]
+
+[build]
+compile = [
+        "cd libtool-2.4.7",
+        "./configure --prefix=/usr",
+        "make"
+]
+
+install = [
+        "make install",
+        "rm -fv /usr/lib/libltdl.a"
+	]

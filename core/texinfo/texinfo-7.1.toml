@@ -1,0 +1,23 @@
+    
+
+[package]
+
+name = "texinfo"
+version = "7.1"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/texinfo/texinfo-7.1.tar.xz"]
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr",
+        "make"
+]
+
+install = [
+        "make install",
+        "make TEXMF=/usr/share/texmf install-tex",
+        "https://raw.githubusercontent.com/LearnixOS/lxos-repo/refs/heads/main/core/texinfo/files/docs.sh | /bin/sh"
+]
+

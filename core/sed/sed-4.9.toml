@@ -1,0 +1,24 @@
+    
+
+[package]
+
+name = "sed"
+version = "4.9"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/sed/sed-4.9.tar.xz"]
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr",
+        "make",
+        "make html"
+]
+
+install = [
+        "make install",
+        "install -d -m755           /usr/share/doc/sed-4.9",
+        "install -m644 doc/sed.html /usr/share/doc/sed-4.9"
+]
+

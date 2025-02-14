@@ -1,0 +1,22 @@
+    
+
+[package]
+
+name = "meson"
+version = "1.5.1"
+author = "saladtoes"
+type = "curl"
+src = ["https://github.com/mesonbuild/meson/releases/download/1.5.1/meson-1.5.1.tar.gz"]
+
+[build]
+
+compile = [
+        "pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD"
+]
+
+install = [
+        "pip3 install --no-index --find-links dist meson",
+        "install -vDm644 data/shell-completions/bash/meson /usr/share/bash-completion/completions/meson",
+        "install -vDm644 data/shell-completions/zsh/_meson /usr/share/zsh/site-functions/_meson"
+]
+

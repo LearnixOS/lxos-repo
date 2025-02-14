@@ -1,0 +1,18 @@
+[package]
+
+name = "libcap"
+version = "2.70"
+author = "saladtoes"
+type = "curl"
+src = ["https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.70.tar.xz"]
+
+[build]
+
+compile = [
+        "sed -i '/install -m.*STA/d' libcap/Makefile",
+        "make prefix=/usr lib=lib",
+]
+
+install = [
+        "make prefix=/usr lib=lib install"
+]

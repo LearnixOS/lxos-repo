@@ -1,0 +1,20 @@
+    
+[package]
+
+name = "patch"
+version = "2.7.6"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/patch/patch-2.7.6.tar.xz"]
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr",
+        "make"
+]
+
+install = [
+        "make install"
+]
+

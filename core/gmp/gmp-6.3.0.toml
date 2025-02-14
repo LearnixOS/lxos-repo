@@ -1,0 +1,20 @@
+[package]
+
+name = "gpm"
+version = "6.3.0"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz"]
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr --enable-cxx --disable-static --docdir=/usr/share/doc/gmp-6.3.0",
+        "make",
+        "make html"
+]
+
+install = [
+        "make install",
+        "make install-html"
+]

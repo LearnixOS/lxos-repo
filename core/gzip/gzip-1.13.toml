@@ -1,0 +1,18 @@
+[package]
+
+name = "gzip"
+version = "1.13"
+author = "saladtoes"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/gzip/gzip-1.13.tar.xz"],
+
+[build]
+
+compile = [
+        "./configure --prefix=/usr",
+        "make"
+]
+
+install = [
+        "make install"
+]
