@@ -1,0 +1,17 @@
+[package]
+name = "htop"
+version = "3.3.0"
+author = "htop-dev"
+type = "curl"
+src = ["https://github.com/htop-dev/htop/releases/download/3.3.0/htop-3.3.0.tar.xz"]
+
+[build]
+compile = [
+    "./autogen.sh",
+    "./configure --prefix=/usr --disable-unicode",
+    "make"
+]
+
+install = [
+    "make install"
+]
