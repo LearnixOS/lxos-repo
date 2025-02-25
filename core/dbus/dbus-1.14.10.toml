@@ -2,7 +2,7 @@
 
 name = "dbus"
 version = "1.14.10"
-author = "saladtoes"
+author = "Red Hat"
 type = "curl"
 src =  ["https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz"]
 

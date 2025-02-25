@@ -2,7 +2,7 @@
 
 name = "grub-bios"
 version = "2.12"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/grub/grub-2.12.tar.xz"]
 

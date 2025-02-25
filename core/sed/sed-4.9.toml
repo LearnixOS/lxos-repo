@@ -4,7 +4,7 @@
 
 name = "sed"
 version = "4.9"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/sed/sed-4.9.tar.xz"]
 

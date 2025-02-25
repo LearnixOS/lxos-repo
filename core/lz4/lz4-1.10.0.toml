@@ -1,7 +1,7 @@
 [package]
 name = "lz4"
 version = "1.10.0"
-author = "saladtoes"
+author = "lz4"
 type = "curl"
 src = ["https://github.com/lz4/lz4/releases/download/v1.10.0/lz4-1.10.0.tar.gz"]
 

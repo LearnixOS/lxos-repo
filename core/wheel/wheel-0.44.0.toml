@@ -3,7 +3,7 @@
 
 name = "wheel"
 version = "0.44.0"
-author = "saladtoes"
+author = "Pypi"
 type = "curl"
 src = ["https://pypi.org/packages/source/w/wheel/wheel-0.44.0.tar.gz"]
 

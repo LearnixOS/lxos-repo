@@ -3,7 +3,7 @@
 
 name = "xmlparser"
 version = "2.47"
-author = "saladtoes"
+author = "Todd Rinaldo"
 type = "curl"
 src = ["https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.47.tar.gz"]
 

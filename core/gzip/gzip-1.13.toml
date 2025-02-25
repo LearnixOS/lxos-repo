@@ -2,7 +2,7 @@
 
 name = "gzip"
 version = "1.13"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/gzip/gzip-1.13.tar.xz"]
 

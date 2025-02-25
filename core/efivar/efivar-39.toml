@@ -2,7 +2,7 @@
 
 name = "efivar"
 version = "39"
-author = "saladtoes"
+author = "Red Hat"
 type = "curl"
 src = ["https://github.com/rhboot/efivar/archive/39/efivar-39.tar.gz"]
 

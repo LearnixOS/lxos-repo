@@ -3,7 +3,7 @@
 
 name = "patch"
 version = "2.7.6"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/patch/patch-2.7.6.tar.xz"]
 

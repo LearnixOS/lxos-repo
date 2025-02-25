@@ -3,7 +3,7 @@
 
 name = "ninja"
 version = "1.12.1"
-author = "saladtoes"
+author = "Ninja"
 type = "curl"
 src = ["https://github.com/ninja-build/ninja/archive/v1.12.1/ninja-1.12.1.tar.gz"]
 

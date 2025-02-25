@@ -3,7 +3,7 @@
 
 name = "grub-efi"
 version = "12.2"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/grub/grub-2.12.tar.xz"]
 

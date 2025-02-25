@@ -2,7 +2,7 @@
 
 name = "procps-ng"
 version = "4.0.4"
-author = "saladtoes"
+author = "Procps"
 type = "curl"
 src = ["https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.4.tar.xz"]
 

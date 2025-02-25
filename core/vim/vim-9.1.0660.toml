@@ -2,7 +2,7 @@
 
 name = "vim"
 version = "9.1.0660"
-author = "saladtoes"
+author = "Bram Moolenaar"
 type = "curl"
 src = ["https://github.com/vim/vim/archive/v9.1.0660/vim-9.1.0660.tar.gz"]
 

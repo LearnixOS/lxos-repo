@@ -2,7 +2,7 @@
 
 name = "bash"
 version = "5.2.32"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/bash/bash-5.2.32.tar.gz"]
 

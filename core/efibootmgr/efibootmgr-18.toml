@@ -2,7 +2,7 @@
 
 name = "efibootmgr"
 version = "18"
-author = "saladtoes"
+author = "Red Hat"
 type = "curl"
 src = ["https://github.com/rhboot/efibootmgr/archive/18/efibootmgr-18.tar.gz"]
 

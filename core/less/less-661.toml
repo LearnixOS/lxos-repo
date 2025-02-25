@@ -2,7 +2,7 @@
 
 name = "less"
 version = "661"
-author = "saladtoes"
+author = "Mark Nudelman"
 type = "curl"
 src = ["https://www.greenwoodsoftware.com/less/less-661.tar.gz"]
 

@@ -3,7 +3,7 @@
 
 name = "setuptools"
 version = "72.2.0"
-author = "saladtoes"
+author = "Pypi"
 type = "curl"
 src = ["https://pypi.org/packages/source/s/setuptools/setuptools-72.2.0.tar.gz"]
 

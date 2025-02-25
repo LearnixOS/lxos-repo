@@ -2,7 +2,7 @@
 
 name = "readline"
 version = "8.2.13"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/readline/readline-8.2.13.tar.gz"]
 

@@ -2,7 +2,7 @@
 
 name = "systemd"
 version = "256.4"
-author = "saladtoes"
+author = "Systemd"
 type = "curl"
 src = ["https://github.com/systemd/systemd/archive/v256.4/systemd-256.4.tar.gz"]
 

@@ -2,7 +2,7 @@
 
 name = "kbd"
 version = "2.6.4"
-author = "saladtoes"
+author = "Linux"
 type = "curl"
 src = ["https://www.kernel.org/pub/linux/utils/kbd/kbd-2.6.4.tar.xz"]
 [patches]

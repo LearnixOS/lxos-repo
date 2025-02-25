@@ -2,7 +2,7 @@
 
 name = "freetype"
 version = "2.13.2"
-author = "saladtoes"
+author = "freetype"
 type = "curl"
 src = ["https://downloads.sourceforge.net/freetype/freetype-2.13.3.tar.xz"]
 

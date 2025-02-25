@@ -1,16 +1,8 @@
-        "PAGE=letter ./configure --prefix=/usr",
-        "make",
-        "make install"
-
-
-    ]
-}
-
 [package]
 
-name = "grodd"
+name = "groff"
 version = "1.23.0"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/groff/groff-1.23.0.tar.gz"]
 

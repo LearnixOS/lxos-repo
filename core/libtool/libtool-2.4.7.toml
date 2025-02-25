@@ -2,7 +2,7 @@
 [package]
 name = "libtool"
 version = "2.4.7"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/libtool/libtool-2.4.7.tar.xz"]
 

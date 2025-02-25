@@ -4,7 +4,7 @@
 
 name = "pkgconf"
 version = "2.3.0"
-author = "saladtoes"
+author = "Pkgconf"
 type = "curl"
 src = ["https://distfiles.ariadne.space/pkgconf/pkgconf-2.3.0.tar.xz"]
 

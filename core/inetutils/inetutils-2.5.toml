@@ -2,7 +2,7 @@
 
 name = "inetutils"
 version = "2.5"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/inetutils/inetutils-2.5.tar.xz"]
 

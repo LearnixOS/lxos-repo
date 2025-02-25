@@ -1,7 +1,7 @@
 [package]
 name = "man-db"
 version = "2.12.1"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://download.savannah.gnu.org/releases/man-db/man-db-2.12.1.tar.xz"]
 

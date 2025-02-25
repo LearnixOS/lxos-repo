@@ -2,7 +2,7 @@
 
 name = "ncurses"
 version = "6.5"
-author = "saladtoes"
+author = "Thomas E. Dickey"
 type = "curl"
 src = ["https://invisible-mirror.net/archives/ncurses/ncurses-6.5.tar.gz"]
 

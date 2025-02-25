@@ -2,7 +2,7 @@
 
 name = "expect"
 version = "5.45.4"
-author = "saladtoes"
+author = "expect"
 type = "curl"
 src = ["https://prdownloads.sourceforge.net/expect/expect5.45.4.tar.gz"]
 

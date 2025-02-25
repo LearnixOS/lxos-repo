@@ -2,7 +2,7 @@
 
 name = "gcc"
 version = "14.2.0"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/gcc/gcc-14.2.0/gcc-14.2.0.tar.xz"]
 

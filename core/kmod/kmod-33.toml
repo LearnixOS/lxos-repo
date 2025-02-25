@@ -2,7 +2,7 @@
 
 name = "kmod"
 version = "33"
-author = "saladtoes"
+author = "Linux"
 type = "curl"
 src = ["https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-33.tar.xz"]
 

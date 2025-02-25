@@ -2,7 +2,7 @@
 [package]
 name = "markupsafe"
 version = "2.1.5"
-author = "saladtoes"
+author = "MarkupSafe"
 type = "curl"
 src = ["https://pypi.org/packages/source/M/MarkupSafe/MarkupSafe-2.1.5.tar.gz"]
 

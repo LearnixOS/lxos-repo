@@ -3,7 +3,7 @@
 
 name = "tar"
 version = "1.25"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/tar/tar-1.35.tar.xz"]
 

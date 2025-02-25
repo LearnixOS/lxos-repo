@@ -2,7 +2,7 @@
 
 name = "gettext"
 version = "0.22.5"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/gettext/gettext-0.22.5.tar.xz"]
 

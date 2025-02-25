@@ -2,7 +2,7 @@
 
 name = "diffutils"
 version = "3.10"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/diffutils/diffutils-3.10.tar.xz"]
 

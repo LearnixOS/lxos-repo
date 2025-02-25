@@ -2,7 +2,7 @@
 
 name = "dejagnu"
 version = "1.6.3"
-author = "saladtoes"
+author = "GNU"
 type = "curl"
 src = ["https://ftp.gnu.org/gnu/dejagnu/dejagnu-1.6.3.tar.gz"]
 
