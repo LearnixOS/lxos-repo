@@ -1,0 +1,11 @@
+# Xorg Fonts
+[[package]]
+name = "xorg-fonts"
+version = "7.7"
+author = "Xorg"
+type = "curl"
+src = ["https://xorg.freedesktop.org/releases/individual/font/font-misc-misc-1.1.2.tar.bz2"]
+
+[build]
+compile = ["./configure --prefix=/usr", "make"]
+install = ["make install"]
