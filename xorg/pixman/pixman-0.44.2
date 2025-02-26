@@ -1,0 +1,18 @@
+# pixman-0.44.2
+[[package]]
+name = "pixman"
+version = "0.44.2"
+author = "Pixman"
+type = "curl"
+src = ["https://cairographics.org/releases/pixman-0.44.2.tar.gz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr",
+    "make"
+]
+
+install = [
+    "make install"
+]
+
