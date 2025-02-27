@@ -1,0 +1,17 @@
+[package]
+name = "iftop"
+version = "1.0pre4"
+author = "Paul D. Woods"
+type = "curl"
+src = ["https://pdw.ex-parrot.com/iftop/download/iftop-1.0pre4.tar.gz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr",
+    "make"
+]
+
+install = [
+    "make install"
+]
+
