@@ -1,0 +1,19 @@
+[package]
+name = "libsndfile"
+version = "1.2.2"
+author = "libsndfile"
+type = "curl"
+src = ["https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2.tar.xz"]
+
+[build]
+compile = [
+    	"./configure --prefix=/usr    \
+            --docdir=/usr/share/doc/libsndfile-1.2.2",
+	"make"
+]
+
+install = [
+    "make install"
+]
+
+
