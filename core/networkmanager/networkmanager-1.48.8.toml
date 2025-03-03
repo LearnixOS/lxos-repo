@@ -1,0 +1,36 @@
+[package]
+name = "networknanager"
+version = "1.48.8"
+author = "Gnome"
+type = "curl"
+src = ["https://download.gnome.org/sources/NetworkManager/1.48/NetworkManager-1.48.8.tar.xz"]
+
+[build]
+compile = [
+    "mkdir -p build",
+    "cd build",
+    "CXXFLAGS+=\"-O2 -fPIC\"",
+    "meson setup .. \
+            --prefix=/usr \
+            --buildtype=release \
+            -D libaudit=no \
+            -D nmtui=true \
+            -D ovs=false \
+            -D ppp=false \
+            -D selinux=false \
+            -D session_tracking=elogind \
+            -D modem_manager=false \
+            -D systemdsystemunitdir=no \
+            -D systemd_journal=false \
+            -D qt=false",
+    "ninja"
+]
+
+install = [
+    "ninja install",
+    "mv -v /usr/share/doc/NetworkManager{,-1.48.8}"
+]
+
+[dependencies]
+libndp = "1.9"
+
