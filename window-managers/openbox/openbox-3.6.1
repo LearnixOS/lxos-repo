@@ -1,0 +1,30 @@
+[package]
+name = "openbox"
+version = "3.6.1"
+author = "Openbox Team"
+type = "curl"
+src = ["http://openbox.org/dist/openbox/openbox-3.6.1.tar.gz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr \
+                --sysconfdir=/etc \
+                --disable-static \
+                --docdir=/usr/share/doc/openbox-3.6.1",
+    "make"
+]
+
+install = [
+    "make install",
+    "rm -v /usr/share/xsessions/openbox-{gnome,kde}.desktop"
+]
+
+[dependencies]
+pango = "1.54.0"
+libXft = "*"
+imlib2 = "1.12.3"
+ImageMagick = "7.1.1-36"
+PyXDG = "0.28"
+startup-notification = "0.12"
+librsvg = "2.58.3"
+dbus = "1.14.10"

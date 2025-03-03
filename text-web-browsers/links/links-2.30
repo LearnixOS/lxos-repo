@@ -1,0 +1,21 @@
+# links-2.30
+[[package]]
+name = "links"
+version = "2.30"
+author = "links"
+type = "curl"
+src = ["http://links.twibright.com/download/links-2.30.tar.bz2"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr --mandir=/usr/share/man",
+    "make"
+]
+
+install = [
+    "make install &&
+install -v -d -m755 /usr/share/doc/links-2.30 &&
+install -v -m644 doc/links_cal/* KEYS BRAILLE_HOWTO \
+    /usr/share/doc/links-2.30"
+]
+

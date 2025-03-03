@@ -1,0 +1,22 @@
+[package]
+name = "dwm"
+version = "6.5"
+author = "suckless"
+type = "curl"
+src = ["https://dl.suckless.org/dwm/dwm-6.5.tar.gz"]
+
+[build]
+compile = [
+    "make"
+]
+
+install = [
+    "make install"
+]
+
+[dependencies]
+libX11 = "*"
+libXinerama = "*"
+libXft = "*"
+libXrandr = "*"
+
