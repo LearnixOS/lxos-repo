@@ -1,0 +1,28 @@
+[package]
+name = "icewm"
+version = "3.6.0"
+author = "IceWM Team"
+type = "curl"
+src = ["https://github.com/ice-wm/icewm/archive/3.6.0/icewm-3.6.0.tar.gz"]
+
+[build]
+compile = [
+    "mkdir build",
+    "cd build",
+    "cmake -D CMAKE_INSTALL_PREFIX=/usr \
+           -D CMAKE_BUILD_TYPE=Release  \
+           -D CFGDIR=/etc               \
+           -D ENABLE_LTO=ON             \
+           -D DOCDIR=/usr/share/doc/icewm-3.6.0 \
+           ..",
+    "make"
+]
+
+install = [
+    "make install"
+]
+
+[dependencies]
+cmake = "*"
+imlib2 = "*"
+

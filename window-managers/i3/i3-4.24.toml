@@ -1,0 +1,29 @@
+[package]
+name = "i3"
+version = "4.24"
+author = "Michael Stapelberg and contributors"
+type = "curl"
+src = ["https://i3wm.org/downloads/i3-4.24.tar.xz"]
+
+[build]
+compile = [
+    "mkdir -p build",
+    "cd build",
+    "meson ..",
+    "ninja"
+]
+
+install = [
+    "ninja install"
+]
+
+[dependencies]
+meson = "*"
+ninja = "*"
+libxcb = "*"
+libxkbcommon = "*"
+pango = "*"
+startup-notification = "*"
+xcb-util-xrm = "*"
+yajl = "*"
+
