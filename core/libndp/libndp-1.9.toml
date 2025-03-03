@@ -1,0 +1,21 @@
+[package]
+name = "libndp"
+version = "1.9"
+author = "libndp"
+type = "curl"
+src = ["http://libndp.org/files/libndp-1.9.tar.gz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr        \
+            --sysconfdir=/etc    \
+            --localstatedir=/var \
+            --disable-static",
+	"make"
+]
+
+install = [
+    "make install"
+]
+
+
