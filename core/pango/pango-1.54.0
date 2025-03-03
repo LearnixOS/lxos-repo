@@ -1,0 +1,33 @@
+[package]
+name = "pango"
+version = "1.54.0"
+author = "Pango developers"
+type = "curl"
+src = ["https://download.gnome.org/sources/pango/1.54/pango-1.54.0.tar.xz"]
+
+[build]
+compile = [
+    "mkdir -p build",
+    "cd build",
+    "meson setup --prefix=/usr \
+                 --buildtype=release \
+                 --wrap-mode=nofallback \
+                 ..",
+    "ninja"
+]
+
+install = [
+    "ninja install"
+]
+
+[dependencies]
+meson = "*"
+ninja = "*"
+fontconfig = "2.15.0"
+freetype = "2.13.3"
+harfbuzz = "9.0.0"
+fribidi = "1.0.15"
+glib = "2.80.4"
+cairo = "1.18.0"
+xorg-libraries = "*"
+
