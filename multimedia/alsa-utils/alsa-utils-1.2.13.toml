@@ -1,0 +1,26 @@
+[package]
+name = "alsa-utils"
+version = "1.2.13"
+author = "alsa"
+type = "curl"
+src = ["https://www.alsa-project.org/files/pub/utils/alsa-utils-1.2.13.tar.bz2"]
+
+[build]
+compile = [
+    "sed -e 's/acp-pdm-dmic/acp-dmic-codec/'                   \
+    -e '/LABEL="alsa_restore_go"/s/go/std/'               \
+    -e '/^ENV.ALSA_CARD_NUMBER/i LABEL="alsa_restore_go"' \
+    -i alsactl/90-alsa-restore.rules.in",
+    "./configure --disable-alsaconf \
+            --disable-bat      \
+            --disable-xmlto    \
+            --with-curses=ncursesw",
+    "make"
+]
+
+install = [
+    "make install"
+]
+
+[dependencies]
+alsa-lib = "*"

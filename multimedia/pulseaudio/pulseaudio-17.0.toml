@@ -1,0 +1,27 @@
+[package]
+name = "pulseAudio"
+version = "1.17"
+author = "PulseAudio"
+type = "curl"
+src = ["https://www.freedesktop.org/software/pulseaudio/releases/pulseaudio-17.0.tar.xz"]
+
+[build]
+compile = [
+    "mkdir build",
+    "cd build",
+    "meson setup --prefix=/usr \
+                 --buildtype=release \
+            	 -D database=gdbm    \
+            	 -D doxygen=false    \
+            	 -D bluez5=disabled  \
+		 ..",
+    "ninja"
+]
+
+install = [
+    "ninja install"
+]
+
+[dependencies]
+libsndfile = "*"
+
