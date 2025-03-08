@@ -1,0 +1,31 @@
+[package]
+name = "alacritty"
+version = "0.15.1"
+author = "Alacritty"
+type = "curl"
+src = ["https://github.com/alacritty/alacritty/releases/download/v0.15.1/alacritty.5.gz"]
+
+dependencies = [
+    "CMake-3.31.6",
+    "FreeType-2.13.2",
+    "Fontconfig-2.15.0",
+    "pkg-config",
+    "make-4.4.1",
+    "libxcb",
+    "libxkbcommon",
+    "python"
+]
+
+[build]
+compile = [
+    "cargo build --release"
+]
+
+[build_with_x11]
+compile = [
+    "cargo build --release --no-default-features --features=x11"
+]
+
+install = [
+    "make install"
+]

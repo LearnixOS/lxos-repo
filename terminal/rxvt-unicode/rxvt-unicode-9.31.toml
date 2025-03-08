@@ -1,0 +1,35 @@
+[package]
+name = "rxvt-unicode"
+version = "9.31"
+author = "schmorp"
+type = "curl"
+src = ["http://dist.schmorp.de/rxvt-unicode/Attic/rxvt-unicode-9.31.tar.bz2"]
+
+dependencies = [
+    "libptytty-2.0"
+]
+
+[build]
+compile = [
+    "./configure --prefix=/usr --enable-everything",
+    "make"
+]
+
+install = [
+    "make install",
+    "cat > /usr/share/applications/urxvt.desktop << 'EOF' &&",
+    "[Desktop Entry]",
+    "Encoding=UTF-8",
+    "Name=Rxvt-Unicode Terminal",
+    "Comment=Use the command line",
+    "GenericName=Terminal",
+    "Exec=urxvt",
+    "Terminal=false",
+    "Type=Application",
+    "Icon=utilities-terminal",
+    "Categories=GTK;Utility;TerminalEmulator;",
+    "#StartupNotify=true",
+    "Keywords=console;command line;execute;",
+    "EOF",
+    "update-desktop-database -q"
+]
