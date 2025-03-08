@@ -1,0 +1,20 @@
+[package]
+name = "luit"
+version = "20240910"
+author = "invisible-mirror"
+type = "curl"
+src = ["https://invisible-mirror.net/archives/luit/luit-20240910.tgz"]
+
+dependencies = [
+    "xorg-applications-7.7"
+]
+
+[build]
+compile = [
+    "./configure $XORG_CONFIG",
+    "make"
+]
+
+install = [
+    "make install"
+]

@@ -1,0 +1,22 @@
+[package]
+name = "libptytty"
+version = "2.0"
+author = "schmorp"
+type = "curl"
+src = ["http://dist.schmorp.de/libptytty/libptytty-2.0.tar.gz"]
+
+dependencies = [
+    "CMake-3.31.6"
+]
+
+[build]
+compile = [
+    "mkdir build &&",
+    "cd build &&",
+    "cmake -D CMAKE_INSTALL_PREFIX=/usr -D CMAKE_BUILD_TYPE=Release -D PT_UTMP_FILE:STRING=/run/utmp ..",
+    "make"
+]
+
+install = [
+    "make install"
+]
