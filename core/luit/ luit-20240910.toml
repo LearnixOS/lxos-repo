@@ -6,7 +6,8 @@ type = "curl"
 src = ["https://invisible-mirror.net/archives/luit/luit-20240910.tgz"]
 
 dependencies = [
-    "xorg-applications-7.7"
+    "libfontenc",
+    "make"
 ]
 
 [build]
