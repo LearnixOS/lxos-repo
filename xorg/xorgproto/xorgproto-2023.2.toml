@@ -1,0 +1,19 @@
+[package]
+name = "xinit"
+version = "1.4.2"
+author = "xorg"
+type = "curl"
+src = ["https://www.x.org/pub/individual/app/xinit-1.4.2.tar.xz"]
+
+[build]
+compile = [
+    "./configure $XORG_CONFIG --with-xinitdir=/etc/X11/app-defaults",
+	"make"
+]
+
+install = [
+        "make install",
+	"ldconfig"
+]
+
+

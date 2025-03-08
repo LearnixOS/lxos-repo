@@ -1,0 +1,19 @@
+[package]
+name = "xf86-video-amdgpu"
+version = "23.0.0"
+author = "X.org"
+type = "curl"
+src = ["https://gitlab.freedesktop.org/xorg/driver/xf86-video-amdgpu/-/archive/xf86-video-amdgpu-23.0.0/xf86-video-amdgpu-xf86-video-amdgpu-23.0.0.tar.gz"]
+
+dependencies = []
+
+[build]
+compile = [
+    "./autogen.sh",
+    "./configure --prefix=/usr",
+    "make"
+]
+
+install = [
+    "make install"
+]

@@ -1,0 +1,18 @@
+[package]
+name = " xf86-input-libinput"
+version = "1.5.0"
+author = "xorg"
+type = "curl"
+src = [https://gitlab.freedesktop.org/xorg/driver/xf86-input-libinput/-/archive/xf86-input-libinput-1.5.0/xf86-input-libinput-xf86-input-libinput-1.5.0.tar.gz]
+
+[build]
+compile = [
+		"autoreconf -vif",
+		"./configure --prefix=$HOME/build",
+		"make"
+]
+
+install = [
+        "make install",
+        "cp conf/99-libinput.conf /etc/X11/xorg.conf.d/"
+]

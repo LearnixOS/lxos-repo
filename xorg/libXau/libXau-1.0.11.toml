@@ -1,0 +1,20 @@
+[package]
+name = "libXau"
+version = "1.0.11"
+author = "libXau"
+type = "curl"
+src = ["https://www.x.org/pub/individual/lib/libXau-1.0.11.tar.xz"]
+
+[build]
+compile = [
+    	"./configure $XORG_CONFIG",
+	"make"
+]
+
+install = [
+    "make install"
+]
+
+[dependencies]
+"xorgproto-2023.2"
+

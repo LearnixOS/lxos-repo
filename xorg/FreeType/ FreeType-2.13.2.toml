@@ -1,0 +1,18 @@
+[package]
+name = "FreeType"
+version = "2.13.2"
+author = "xorg"
+type = "curl"
+src = ["https://downloads.sourceforge.net/freetype/freetype-2.13.2.tar.xz"]
+
+[build]
+compile = [
+		"sed -ri "s:.*(AUX_MODULES.*valid):\1:" modules.cfg",
+		"sed -r "s:.*(#.*SUBPIXEL_RENDERING) .*:\1:" \
+    -i include/freetype/config/ftoption.h",
+		"make"
+]
+
+install = [
+        "make install"
+]

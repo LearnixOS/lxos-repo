@@ -1,0 +1,15 @@
+[package]
+name = "xcb-proto"
+version = "1.16.0"
+author = "xorg"
+type = "curl"
+src = ["https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-1.16.0.tar.xz"]
+
+[build]
+compile = [
+		"PYTHON=python3 ./configure $XORG_CONFIG"
+]
+
+install = [
+        "make install"
+]

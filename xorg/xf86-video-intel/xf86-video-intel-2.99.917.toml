@@ -1,0 +1,17 @@
+[package]
+name = "xf86-video-intel"
+version = "2.99.917"
+author = "xorg"
+type = "curl"
+src = ["https://gitlab.freedesktop.org/xorg/driver/xf86-video-intel/-/archive/2.99.917/xf86-video-intel-2.99.917.tar.gz"]
+
+[build]
+compile = [
+    "autoreconf -vif",
+    "./configure --prefix=$HOME/build --enable-dri --enable-kms --enable-udev",
+    "make"
+]
+
+install = [
+    "make install"
+]

@@ -1,0 +1,25 @@
+[package]
+name = "Fontconfig"
+version = "2.15.0"
+author = "xorg"
+type = "curl"
+src = ["https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.15.0.tar.xz"]
+
+
+[dependencies]
+	"FreeType-2.13.2"
+
+
+[build]
+compile = [
+		"./configure --prefix=/usr        \
+            --sysconfdir=/etc    \
+            --localstatedir=/var \
+            --disable-docs       \
+            --docdir=/usr/share/doc/fontconfig-2.15.0",
+		"make"
+]
+
+install = [
+        "make install"
+]

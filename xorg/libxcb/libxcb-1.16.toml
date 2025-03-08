@@ -1,0 +1,28 @@
+[package]
+
+name = "libxcb"
+version = "1.16"
+author = "xorg"
+type = "curl"
+src = ["https://xorg.freedesktop.org/archive/individual/lib/libxcb-1.16.tar.xz"]
+
+[build]
+
+compile = [
+        "./configure $XORG_CONFIG      \
+            --without-doxygen \
+            --docdir='${datadir}'/doc/libxcb-1.16",
+	"LC_ALL=en_US.UTF-8 make"
+]
+
+install = [
+        "make install"
+]
+
+[extra]
+
+deps = [
+	"libXau-1.0.11",
+	"xcb-proto-1.16.0"
+]
+

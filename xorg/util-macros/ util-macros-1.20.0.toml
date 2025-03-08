@@ -1,0 +1,15 @@
+[package]
+name = "Fontconfig"
+version = "2.15.0"
+author = "xorg"
+type = "curl"
+src = ["https://www.x.org/pub/individual/util/util-macros-1.20.0.tar.xz"]
+
+[build]
+compile = [
+		"./configure $XORG_CONFIG"
+]
+
+install = [
+        "make install"
+]
