@@ -1,0 +1,17 @@
+[package]
+name = "dmenu"
+version = "5.3"
+author = "suckless"
+type = "curl"
+src = ["https://dl.suckless.org/tools/dmenu-5.3.tar.gz"]
+
+dependencies = []
+
+[build]
+compile = [
+    "make"
+]
+
+install = [
+    "make install"
+]

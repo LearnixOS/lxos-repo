@@ -1,0 +1,17 @@
+[package]
+name = "slstatus"
+version = "1.0"
+author = "suckless"
+type = "curl"
+src = ["https://dl.suckless.org/tools/slstatus-1.0.tar.gz"]
+
+dependencies = []
+
+[build]
+compile = [
+    "make"
+]
+
+install = [
+    "make install"
+]
