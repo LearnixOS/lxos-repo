@@ -1,0 +1,17 @@
+[package]
+name = "libpcap"
+version = "1.10.5"
+author = "tcpdump.org"
+type = "curl"
+src = ["https://www.tcpdump.org/release/libpcap-1.10.5.tar.gz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr",
+    "make"
+]
+
+install = [
+    "make install"
+]
+
