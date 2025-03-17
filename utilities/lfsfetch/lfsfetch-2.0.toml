@@ -1,0 +1,12 @@
+[package]
+name = "neofetch"
+version = "7.1.0"
+author = "dylanaraps"
+type = "curl"
+src = ["https://github.com/user7210unix/lfsfetch/releases/download/2.0/fetch"]
+
+[build]
+compile = [
+   "cp -r fetch /usr/bin/"
+]
+

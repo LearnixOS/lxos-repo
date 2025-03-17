@@ -1,0 +1,15 @@
+[package]
+name = "neofetch"
+version = "7.1.0"
+author = "dylanaraps"
+type = "git"
+src = ["https://github.com/dylanaraps/neofetch.git"]
+[build]
+compile = [
+   ""
+]
+
+install = [
+    "make install"
+]
+
