@@ -1,0 +1,19 @@
+[package]
+name = "libwnck"
+version = "43.2"
+author = "GNOME Devs"
+type = "curl"
+src = ["https://download.gnome.org/sources/libwnck/43/libwnck-43.2.tar.xz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr --sysconfdir=/etc",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+gtk3 = "*"
+

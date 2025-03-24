@@ -1,0 +1,22 @@
+[package]
+name = "xfwm4"
+version = "4.20.0"
+author = "Xfce Devs"
+type = "curl"
+src = ["https://archive.xfce.org/src/xfce/xfwm4/4.20/xfwm4-4.20.0.tar.bz2"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr --sysconfdir=/etc",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+gtk3 = "*"
+libxfce4ui = "*"
+libxfce4util = "*"
+xfconf = "*"
+

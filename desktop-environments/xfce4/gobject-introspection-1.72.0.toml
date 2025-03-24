@@ -1,0 +1,20 @@
+[package]
+name = "gobject-introspection"
+version = "1.72.0"
+author = "GNOME Devs"
+type = "curl"
+src = ["https://download.gnome.org/sources/gobject-introspection/1.72/gobject-introspection-1.72.0.tar.xz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+glib = "*"
+python = "*"
+

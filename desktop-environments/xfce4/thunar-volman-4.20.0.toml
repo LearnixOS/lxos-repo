@@ -1,0 +1,19 @@
+[package]
+name = "thunar-volman"
+version = "4.20.0"
+author = "Xfce Devs"
+type = "curl"
+src = ["https://archive.xfce.org/src/xfce/thunar-volman/4.20/thunar-volman-4.20.0.tar.bz2"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr --sysconfdir=/etc",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+thunar = "*"
+

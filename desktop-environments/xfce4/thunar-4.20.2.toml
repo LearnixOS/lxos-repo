@@ -1,0 +1,22 @@
+[package]
+name = "Thunar"
+version = "4.20.2"
+author = "Xfce Devs"
+type = "curl"
+src = ["https://archive.xfce.org/src/xfce/thunar/4.20/thunar-4.20.2.tar.bz2"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr --sysconfdir=/etc",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+gtk3 = "*"
+libxfce4util = "*"
+libxfce4ui = "*"
+exo = "*"
+

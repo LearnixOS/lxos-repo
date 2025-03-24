@@ -1,0 +1,21 @@
+[package]
+name = "xfce4-appfinder"
+version = "4.20.0"
+author = "Xfce Devs"
+type = "curl"
+src = ["https://archive.xfce.org/src/xfce/xfce4-appfinder/4.20/xfce4-appfinder-4.20.0.tar.bz2"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr --sysconfdir=/etc",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+gtk3 = "*"
+libxfce4util = "*"
+libxfce4ui = "*"
+

@@ -1,0 +1,23 @@
+[package]
+name = "xfdesktop"
+version = "4.20.1"
+author = "Xfce Devs"
+type = "curl"
+src = ["https://archive.xfce.org/src/xfce/xfdesktop/4.20/xfdesktop-4.20.1.tar.bz2"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr --sysconfdir=/etc",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+gtk3 = "*"
+libxfce4ui = "*"
+libxfce4util = "*"
+xfconf = "*"
+exo = "*"
+
