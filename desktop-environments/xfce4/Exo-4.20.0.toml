@@ -1,5 +1,5 @@
 [package]
-name = "Exo"
+name = "exo"
 version = "4.20.0"
 author = "Xfce Devs"
 type = "curl"
