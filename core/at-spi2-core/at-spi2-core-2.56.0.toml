@@ -1,0 +1,20 @@
+[package]
+name = "at-spi2-core"
+version = "2.56.0"
+author = "GNOME Developers"
+type = "curl"
+src = ["https://download.gnome.org/sources/at-spi2-core/2.56/at-spi2-core-2.56.0.tar.xz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr --sysconfdir=/etc",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+dbus = "*"
+glib = "*"
+

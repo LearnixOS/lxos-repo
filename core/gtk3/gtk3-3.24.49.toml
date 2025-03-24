@@ -1,0 +1,24 @@
+[package]
+name = "gtk3"
+version = "3.24.49"
+author = "GNOME Developers"
+type = "curl"
+src = ["https://download.gnome.org/sources/gtk/3.24/gtk-3.24.49.tar.xz"]
+
+[build]
+compile = [
+    "mkdir build",
+    "cd build",
+    "meson setup .. --prefix=/usr --buildtype=release -Dman=true -Dbroadway_backend=true",
+    "ninja"
+]
+install = [
+    "ninja -C build install"
+]
+
+[dependencies]
+at-spi2-core = "*"
+gdk-pixbuf = "*"
+libepoxy = "*"
+pango = "*"
+

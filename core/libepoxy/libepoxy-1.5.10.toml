@@ -1,0 +1,19 @@
+[package]
+name = "libepoxy"
+version = "1.5.10"
+author = "Anholt Labs"
+type = "curl"
+src = ["https://github.com/anholt/libepoxy/releases/download/v1.5.10/libepoxy-1.5.10.tar.xz"]
+
+[build]
+compile = [
+    "meson setup build --prefix=/usr",
+    "ninja -C build"
+]
+install = [
+    "ninja -C build install"
+]
+
+[dependencies]
+mesa = "*"
+
