@@ -1,0 +1,18 @@
+[package]
+name = "libffi"
+version = "3.4.2"
+author = "Anthony Green"
+type = "curl"
+src = ["https://github.com/libffi/libffi/releases/download/v3.4.2/libffi-3.4.2.tar.gz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+

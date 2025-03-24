@@ -1,0 +1,21 @@
+[package]
+name = "gdk-pixbuf"
+version = "2.42.8"
+author = "GNOME Devs"
+type = "curl"
+src = ["https://download.gnome.org/sources/gdk-pixbuf/2.42/gdk-pixbuf-2.42.8.tar.xz"]
+
+[build]
+compile = [
+    "meson build --prefix=/usr",
+    "ninja -C build"
+]
+install = [
+    "ninja -C build install"
+]
+
+[dependencies]
+glib = "*"
+libjpeg = "*"
+libpng = "*"
+

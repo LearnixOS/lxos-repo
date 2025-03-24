@@ -1,0 +1,20 @@
+[package]
+name = "wayland"
+version = "1.20.0"
+author = "Wayland Devs"
+type = "curl"
+src = ["https://wayland.freedesktop.org/releases/wayland-1.20.0.tar.xz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+libffi = "*"
+expat = "*"
+

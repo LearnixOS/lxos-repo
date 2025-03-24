@@ -1,0 +1,19 @@
+[package]
+name = "libpng"
+version = "1.6.37"
+author = "libpng Developers"
+type = "curl"
+src = ["https://download.sourceforge.net/libpng/libpng-1.6.37.tar.xz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+zlib = "*"
+

@@ -1,0 +1,18 @@
+[package]
+name = "zlib"
+version = "1.2.13"
+author = "Jean-loup Gailly and Mark Adler"
+type = "curl"
+src = ["https://zlib.net/zlib-1.2.13.tar.xz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+

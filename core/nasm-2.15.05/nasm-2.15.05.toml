@@ -1,0 +1,18 @@
+[package]
+name = "nasm"
+version = "2.15.05"
+author = "H. Peter Anvin et al."
+type = "curl"
+src = ["https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/nasm-2.15.05.tar.xz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+

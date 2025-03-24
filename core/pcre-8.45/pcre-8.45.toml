@@ -1,0 +1,18 @@
+[package]
+name = "pcre"
+version = "8.45"
+author = "PCRE Developers"
+type = "curl"
+src = ["https://ftp.pcre.org/pub/pcre/pcre-8.45.tar.bz2"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr --enable-utf8 --enable-unicode-properties",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+
