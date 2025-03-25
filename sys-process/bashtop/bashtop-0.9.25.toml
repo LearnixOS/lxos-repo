@@ -4,10 +4,11 @@ version = "0.9.25"
 source = "https://github.com/aristocratos/bashtop/archive/refs/tags/v0.9.25.tar.gz"
 
 [build]
-install = ["make install"]
+install = [
+"make install"
 ]
 
 [uninstall]
 commands = [
-    "sudo make uninstall"
+    "make uninstall"
 ]
