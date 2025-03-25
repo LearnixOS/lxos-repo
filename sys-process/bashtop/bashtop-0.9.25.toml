@@ -1,13 +1,10 @@
 [package]
 name = "bashtop"
 version = "0.9.25"
-author = "aristocratos"
-type = "git"
-src = ["https://github.com/aristocratos/bashtop.git"]
+source = "https://github.com/aristocratos/bashtop/archive/refs/tags/v0.9.25.tar.gz"
 
-[install]
-commands = [
-    "sudo make install"
+[build]
+install = ["make install"]
 ]
 
 [uninstall]
