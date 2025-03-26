@@ -1,5 +1,5 @@
 [package]
-name = "FreeType"
+name = "freetype"
 version = "2.13.2"
 author = "xorg"
 type = "curl"
