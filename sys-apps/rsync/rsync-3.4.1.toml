@@ -1,0 +1,25 @@
+[package]
+
+name = "rsync"
+version = "3.4.1"
+author = "Andrew Tridgell"
+type = "curl"
+src = ["https://www.samba.org/ftp/rsync/src/rsync-3.4.1.tar.gz"]
+
+dependencies = ["popt"]
+
+[build]
+
+compile = [
+        "groupadd -g 48 rsyncd",
+        "useradd -c \"rsyncd Daemon\" -m -d /home/rsync -g rsyncd \ ",
+        "-s /bin/false -u 48 rsyncd",
+        "./configure --prefix=/usr    \ ",
+        "--disable-xxhash \ ",
+        "--without-included-zlib",
+        "make"
+]
+
+install = [
+        "make install"
+]

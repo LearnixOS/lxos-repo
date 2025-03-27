@@ -6,6 +6,8 @@ author = "Linus Torvalts"
 type = "curl"
 src = ["https://web.git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/linux-firmware-20250311.tar.gz"]
 
+dependencies = ["rsync"] # using rsync for upgrading reasons
+
 [build]
 
 install = [
