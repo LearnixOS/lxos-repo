@@ -1,0 +1,19 @@
+[package]
+name = "screenfetch"
+version = "3.9.1"
+author = "Brett Bohnenkamper"
+license = "GPL-3.0"
+type = "curl"
+src = ["https://github.com/KittyKatt/screenFetch/archive/refs/tags/v3.9.1.tar.gz"]
+
+[build]
+compile = []
+install = [
+    "install -Dm755 screenfetch-dev /usr/local/bin/screenfetch",
+    "install -Dm644 screenfetch.1 /usr/local/share/man/man1/screenfetch.1"
+]
+
+[dependencies]
+bc = "*"
+pciutils = "*"
+procps = "*"
