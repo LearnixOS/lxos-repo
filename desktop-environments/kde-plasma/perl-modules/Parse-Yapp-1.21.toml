@@ -1,0 +1,15 @@
+[package]
+name = "Parse-Yapp"
+version = "1.21"
+author = "WBRASWELL"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/W/WB/WBRASWELL/Parse-Yapp-1.21.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

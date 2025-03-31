@@ -1,0 +1,15 @@
+[package]
+name = "IPC-Run3"
+version = "0.049"
+author = "RJBS"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/R/RJ/RJBS/IPC-Run3-0.049.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

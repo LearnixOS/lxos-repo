@@ -1,0 +1,12 @@
+[package]
+name = "autovivification"
+version = "0.18"
+author = "VPIT"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/V/VP/VPIT/autovivification-0.18.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]

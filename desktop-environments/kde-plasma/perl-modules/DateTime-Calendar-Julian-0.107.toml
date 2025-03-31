@@ -1,0 +1,15 @@
+[package]
+name = "DateTime-Calendar-Julian"
+version = "0.107"
+author = "WYANT"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/W/WY/WYANT/DateTime-Calendar-Julian-0.107.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+DateTime = "1.65"

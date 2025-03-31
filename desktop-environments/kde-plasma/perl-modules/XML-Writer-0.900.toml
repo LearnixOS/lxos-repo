@@ -1,0 +1,15 @@
+[package]
+name = "XML-Writer"
+version = "0.900"
+author = "JOSEPHW"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/J/JO/JOSEPHW/XML-Writer-0.900.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

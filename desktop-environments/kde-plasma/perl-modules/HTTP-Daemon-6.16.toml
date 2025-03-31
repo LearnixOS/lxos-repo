@@ -1,0 +1,15 @@
+[package]
+name = "HTTP-Daemon"
+version = "6.16"
+author = "OALDERS"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.16.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+"HTTP-Message" = "7.00"

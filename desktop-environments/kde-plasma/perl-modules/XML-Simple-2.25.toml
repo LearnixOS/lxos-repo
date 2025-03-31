@@ -1,0 +1,15 @@
+[package]
+name = "XML-Simple"
+version = "2.25"
+author = "GRANTM"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/G/GR/GRANTM/XML-Simple-2.25.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

@@ -1,0 +1,16 @@
+[package]
+name = "IO-Socket-SSL"
+version = "2.089"
+author = "SULLR"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.089.tar.gz"]
+
+[build]
+compile = ["yes | perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+"make-ca" = "1.15"
+"Net-SSLeay" = "1.94"

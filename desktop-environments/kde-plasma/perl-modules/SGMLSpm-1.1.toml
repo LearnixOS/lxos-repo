@@ -1,0 +1,15 @@
+[package]
+name = "SGMLSpm"
+version = "1.1"
+author = "RAAB"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/R/RA/RAAB/SGMLSpm-1.1.tar.gz"]
+
+[build]
+compile = ["chmod -v 644 MYMETA.yml", "perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install", "ln -sv sgmlspl.pl /usr/bin/sgmlspl"]
+
+[dependencies]
+# No required dependencies listed

@@ -1,0 +1,15 @@
+[package]
+name = "File-FcntlLock"
+version = "0.22"
+author = "JTT"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/J/JT/JTT/File-FcntlLock-0.22.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

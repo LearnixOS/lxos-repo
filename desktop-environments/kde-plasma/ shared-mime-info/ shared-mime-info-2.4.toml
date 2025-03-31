@@ -1,0 +1,23 @@
+[package]
+name = "shared-mime-info"
+version = "2.4"
+author = "Freedesktop.org"
+type = "curl"
+src = ["https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/2.4/shared-mime-info-2.4.tar.gz"]
+additional_downloads = ["https://anduin.linuxfromscratch.org/BLFS/xdgmime/xdgmime.tar.xz"]
+
+[build]
+compile = [
+    "tar -xf ../xdgmime.tar.xz",
+    "make -C xdgmime",
+    "mkdir build && cd build",
+    "meson setup --prefix=/usr --buildtype=release -D update-mimedb=true ..",
+    "ninja"
+]
+
+[install]
+install = ["ninja install"]
+
+[dependencies]
+glib = "2.84.0"
+libxml2 = "2.13.6"

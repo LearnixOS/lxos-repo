@@ -1,0 +1,16 @@
+[package]
+name = "Text-BibTeX"
+version = "0.91"
+author = "AMBS"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/A/AM/AMBS/Text-BibTeX-0.91.tar.gz"]
+
+[build]
+compile = ["perl Build.PL", "./Build", "./Build test"]
+
+[install]
+install = ["./Build install"]
+
+[dependencies]
+"Config-AutoConf" = "0.320"
+"ExtUtils-LibBuilder" = "0.09"

@@ -1,0 +1,17 @@
+[package]
+name = "LWP-Protocol-https"
+version = "6.14"
+author = "OALDERS"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/O/OA/OALDERS/LWP-Protocol-https-6.14.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+"IO-Socket-SSL" = "2.089"
+"libwww-perl" = "6.78"
+"make-ca" = "1.15"

@@ -1,0 +1,15 @@
+[package]
+name = "Parse-RecDescent"
+version = "1.967015"
+author = "JTBRAUN"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/J/JT/JTBRAUN/Parse-RecDescent-1.967015.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

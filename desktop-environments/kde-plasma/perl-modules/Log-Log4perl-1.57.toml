@@ -1,0 +1,15 @@
+[package]
+name = "Log-Log4perl"
+version = "1.57"
+author = "ETJ"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/E/ET/ETJ/Log-Log4perl-1.57.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

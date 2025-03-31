@@ -1,0 +1,16 @@
+[package]
+name = "List-AllUtils"
+version = "0.19"
+author = "DROLSKY"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/D/DR/DROLSKY/List-AllUtils-0.19.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+"List-SomeUtils" = "0.59"
+"List-UtilsBy" = "0.12"

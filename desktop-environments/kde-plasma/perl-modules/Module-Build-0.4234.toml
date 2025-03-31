@@ -1,0 +1,15 @@
+[package]
+name = "Module-Build"
+version = "0.4234"
+author = "LEONT"
+type = "curl"
+src = ["https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4234.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

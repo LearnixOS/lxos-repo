@@ -1,0 +1,15 @@
+[package]
+name = "Unicode-Collate"
+version = "1.31"
+author = "SADAHIRO"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/S/SA/SADAHIRO/Unicode-Collate-1.31.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

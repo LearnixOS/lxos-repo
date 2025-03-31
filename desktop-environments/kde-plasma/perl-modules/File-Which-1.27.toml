@@ -1,0 +1,15 @@
+[package]
+name = "File-Which"
+version = "1.27"
+author = "PLICEASE"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/P/PL/PLICEASE/File-Which-1.27.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

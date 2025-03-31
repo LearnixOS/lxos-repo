@@ -1,0 +1,16 @@
+[package]
+name = "DateTime-Format-Builder"
+version = "0.83"
+author = "DROLSKY"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-Builder-0.83.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+"DateTime-Format-Strptime" = "1.79"
+"Params-Validate" = "1.31"

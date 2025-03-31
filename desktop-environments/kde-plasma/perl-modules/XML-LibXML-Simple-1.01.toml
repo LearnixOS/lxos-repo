@@ -1,0 +1,15 @@
+[package]
+name = "XML-LibXML-Simple"
+version = "1.01"
+author = "MARKOV"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/M/MA/MARKOV/XML-LibXML-Simple-1.01.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+"XML-LibXML" = "2.0210"

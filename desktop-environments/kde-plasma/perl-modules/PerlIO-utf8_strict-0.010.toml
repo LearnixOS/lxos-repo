@@ -1,0 +1,15 @@
+[package]
+name = "PerlIO-utf8_strict"
+version = "0.010"
+author = "LEONT"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/L/LE/LEONT/PerlIO-utf8_strict-0.010.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

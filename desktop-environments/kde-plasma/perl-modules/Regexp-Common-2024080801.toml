@@ -1,0 +1,15 @@
+[package]
+name = "Regexp-Common"
+version = "2024080801"
+author = "ABIGAIL"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-2024080801.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

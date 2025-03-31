@@ -1,0 +1,15 @@
+[package]
+name = "Text-CSV"
+version = "2.06"
+author = "ISHIGAKI"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/I/IS/ISHIGAKI/Text-CSV-2.06.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

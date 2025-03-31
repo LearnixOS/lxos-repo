@@ -1,0 +1,15 @@
+[package]
+name = "Text-Roman"
+version = "3.5"
+author = "SYP"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/S/SY/SYP/Text-Roman-3.5.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

@@ -1,0 +1,15 @@
+[package]
+name = "Business-ISMN"
+version = "1.204"
+author = "BRIANDFOY"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISMN-1.204.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+"Tie-Cycle" = "1.229"

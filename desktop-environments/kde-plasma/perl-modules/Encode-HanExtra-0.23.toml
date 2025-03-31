@@ -1,0 +1,15 @@
+[package]
+name = "Encode-HanExtra"
+version = "0.23"
+author = "AUDREYT"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/A/AU/AUDREYT/Encode-HanExtra-0.23.tar.gz"]
+
+[build]
+compile = ["PERL_USE_UNSAFE_INC=1 perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

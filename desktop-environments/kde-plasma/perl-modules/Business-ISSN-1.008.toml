@@ -1,0 +1,15 @@
+[package]
+name = "Business-ISSN"
+version = "1.008"
+author = "BRIANDFOY"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISSN-1.008.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

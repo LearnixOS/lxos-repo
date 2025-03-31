@@ -1,0 +1,15 @@
+[package]
+name = "Business-ISBN"
+version = "3.011"
+author = "BRIANDFOY"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISBN-3.011.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+"Business-ISBN-Data" = "20250205.001"

@@ -1,0 +1,15 @@
+[package]
+name = "Lingua-Translit"
+version = "0.29"
+author = "ALINKE"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/A/AL/ALINKE/Lingua-Translit-0.29.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

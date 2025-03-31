@@ -1,0 +1,15 @@
+[package]
+name = "Encode-EUCJPASCII"
+version = "0.03"
+author = "NEZUMI"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/N/NE/NEZUMI/Encode-EUCJPASCII-0.03.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

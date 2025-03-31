@@ -1,0 +1,16 @@
+[package]
+name = "HTML-Parser"
+version = "3.83"
+author = "OALDERS"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.83.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+"HTML-Tagset" = "3.24"
+"HTTP-Message" = "7.00"

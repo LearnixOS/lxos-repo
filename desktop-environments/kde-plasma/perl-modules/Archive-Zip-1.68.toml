@@ -1,0 +1,12 @@
+[package]
+name = "Archive-Zip"
+version = "1.68"
+author = "PHRED"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/P/PH/PHRED/Archive-Zip-1.68.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]

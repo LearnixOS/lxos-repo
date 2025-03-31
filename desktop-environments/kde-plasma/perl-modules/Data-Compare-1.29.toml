@@ -1,0 +1,16 @@
+[package]
+name = "Data-Compare"
+version = "1.29"
+author = "DCANTRELL"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/D/DC/DCANTRELL/Data-Compare-1.29.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+Clone = "0.47"
+"File-Find-Rule" = "0.34"

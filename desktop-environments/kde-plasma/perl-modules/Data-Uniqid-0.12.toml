@@ -1,0 +1,15 @@
+[package]
+name = "Data-Uniqid"
+version = "0.12"
+author = "MWX"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/M/MW/MWX/Data-Uniqid-0.12.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

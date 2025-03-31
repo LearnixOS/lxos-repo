@@ -1,0 +1,16 @@
+[package]
+name = "Unicode-LineBreak"
+version = "2019.001"
+author = "NEZUMI"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/N/NE/NEZUMI/Unicode-LineBreak-2019.001.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+"MIME-Charset" = "1.013.1"
+Wget = "1.25.0"

@@ -1,0 +1,15 @@
+[package]
+name = "Class-Accessor"
+version = "0.51"
+author = "KASEI"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

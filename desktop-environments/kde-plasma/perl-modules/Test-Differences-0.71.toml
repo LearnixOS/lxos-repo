@@ -1,0 +1,15 @@
+[package]
+name = "Test-Differences"
+version = "0.71"
+author = "DCANTRELL"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/D/DC/DCANTRELL/Test-Differences-0.71.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+"Text-Diff" = "1.45"

@@ -1,0 +1,16 @@
+[package]
+name = "XML-LibXSLT"
+version = "2.003000"
+author = "SHLOMIF"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/S/SH/SHLOMIF/XML-LibXSLT-2.003000.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+libxslt = "1.1.43"
+"XML-LibXML" = "2.0210"

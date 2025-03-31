@@ -1,0 +1,15 @@
+[package]
+name = "File-Slurper"
+version = "0.014"
+author = "LEONT"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/L/LE/LEONT/File-Slurper-0.014.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed

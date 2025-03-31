@@ -1,0 +1,15 @@
+[package]
+name = "URI"
+version = "5.31"
+author = "OALDERS"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/O/OA/OALDERS/URI-5.31.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+"MIME-Base32" = "1.303"

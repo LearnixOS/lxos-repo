@@ -1,0 +1,15 @@
+[package]
+name = "Data-Dump"
+version = "1.25"
+author = "GARU"
+type = "curl"
+src = ["https://www.cpan.org/authors/id/G/GA/GARU/Data-Dump-1.25.tar.gz"]
+
+[build]
+compile = ["perl Makefile.PL", "make", "make test"]
+
+[install]
+install = ["make install"]
+
+[dependencies]
+# No required dependencies listed
