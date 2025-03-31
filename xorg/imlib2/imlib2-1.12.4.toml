@@ -1,0 +1,19 @@
+[package]
+name = "imlib2"
+version = "1.12.4"
+author = "Enlightenment Project"
+type = "curl"
+src = ["https://downloads.sourceforge.net/enlightenment/imlib2-1.12.4.tar.xz"]
+
+[build]
+compile = ["./configure --prefix=/usr --disable-static", "make"]
+
+[install]
+install = [
+    "make install",
+    "install -v -m755 -d /usr/share/doc/imlib2-1.12.4/html",
+    "install -v -m644 doc/html/* /usr/share/doc/imlib2-1.12.4/html"
+]
+
+[dependencies]
+xorg-libraries = "latest"  # Version not specified in BLFS, using "latest" as placeholder

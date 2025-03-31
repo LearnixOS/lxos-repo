@@ -1,0 +1,16 @@
+[package]
+name = "libXinerama"
+version = "1.1.5"
+author = "X.Org"
+type = "curl"
+src = ["https://www.x.org/pub/individual/lib/libXinerama-1.1.5.tar.xz"]
+
+[build]
+compile = ["./configure $XORG_CONFIG --docdir=$XORG_PREFIX/share/doc/libXinerama-1.1.5", "make"]
+
+[install]
+install = ["make install", "/sbin/ldconfig"]
+
+[dependencies]
+fontconfig = "2.16.0"
+libxcb = "1.17.0"

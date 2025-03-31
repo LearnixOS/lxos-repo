@@ -1,0 +1,16 @@
+[package]
+name = "libX11"
+version = "1.8.12"
+author = "X.Org"
+type = "curl"
+src = ["https://www.x.org/pub/individual/lib/libX11-1.8.12.tar.xz"]
+
+[build]
+compile = ["./configure $XORG_CONFIG --docdir=$XORG_PREFIX/share/doc/libX11-1.8.12", "make"]
+
+[install]
+install = ["make install", "/sbin/ldconfig"]
+
+[dependencies]
+fontconfig = "2.16.0"
+libxcb = "1.17.0"
