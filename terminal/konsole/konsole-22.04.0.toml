@@ -1,0 +1,21 @@
+[package]
+name = "konsole"
+version = "22.04.0"
+author = "KDE Community"
+license = "GPL-2.0"
+type = "curl"
+src = ["https://download.kde.org/stable/konsole/22.04.0/konsole-22.04.0.tar.xz"]
+
+[build]
+compile = [
+    "mkdir build && cd build",
+    "cmake .. -DCMAKE_INSTALL_PREFIX=/usr",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+qt = "5.15.2"
+kde_frameworks = "5.94.0"

@@ -1,0 +1,18 @@
+[package]
+name = "wezterm"
+version = "2025.03.30"
+author = "Wez Furlong"
+license = "MIT"
+type = "curl"
+src = ["https://github.com/wez/wezterm/releases/download/2025.03.30/wezterm-2025.03.30.tar.gz"]
+
+[build]
+compile = [
+    "cargo build --release"
+]
+install = [
+    "cargo install --path ."
+]
+
+[dependencies]
+rust = "1.56.0"
