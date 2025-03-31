@@ -1,0 +1,17 @@
+[package]
+name = "which"
+version = "2.23"
+author = "GNU Project"
+type = "curl"
+src = ["https://ftp.gnu.org/gnu/which/which-2.23.tar.gz"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr",
+    "make"
+]
+
+install = [
+    "make install"
+]
+
