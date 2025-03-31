@@ -1,0 +1,20 @@
+[package]
+name = "make-ca"
+version = "1.15"
+author = "LFS Book Project"
+type = "curl"
+src = ["https://github.com/lfs-book/make-ca/archive/v1.15/make-ca-1.15.tar.gz"]
+
+[build]
+compile = []  # No build step; installation only
+
+[install]
+install = [
+    "make install",
+    "install -vdm755 /etc/ssl/local",
+    # Generate certificate stores (required for most dependent packages)
+    "/usr/sbin/make-ca -g"
+]
+
+[dependencies]
+p11-kit = "0.25.5"  # Required at runtime
