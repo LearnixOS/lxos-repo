@@ -1,0 +1,24 @@
+[package]
+name = "xfce4-screenshooter"
+version = "1.10.6"
+author = "XFCE Devs"
+type = "curl"
+src = ["https://archive.xfce.org/src/apps/xfce4-screenshooter/1.10/xfce4-screenshooter-1.10.6.tar.bz2"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+libxfce4ui = "*"
+libxfce4util = "*"
+exo = "*"
+libx11 = "*"
+libxext = "*"
+libxfixes = "*"
+
