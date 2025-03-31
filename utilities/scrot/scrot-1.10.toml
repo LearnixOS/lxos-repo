@@ -1,0 +1,25 @@
+[package]
+name = "scrot"
+version = "1.10"
+author = "Resurrecting Open Source Projects"
+type = "curl"
+src = ["https://github.com/resurrecting-open-source-projects/scrot/archive/refs/tags/1.10.tar.gz"]
+
+[build]
+compile = [
+    "./autogen.sh",
+    "./configure --prefix=/usr",
+    "make"
+]
+install = [
+    "make install"
+]
+
+[dependencies]
+imlib2 = "*"
+libX11 = "*"
+libXcomposite = "*"
+libXext = "*"
+libXfixes = "*"
+libXinerama = "*"
+
