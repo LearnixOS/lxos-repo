@@ -1,0 +1,21 @@
+[package]
+name = "breeze-icons"
+version = "6.11.0"
+author = "KDE Community"
+type = "curl"
+src = ["https://download.kde.org/stable/frameworks/6.11/breeze-icons-6.11.0.tar.xz"]
+
+[build]
+compile = [
+    "mkdir build && cd build",
+    "cmake -D CMAKE_INSTALL_PREFIX=/usr -D BUILD_TESTING=OFF -W no-dev ..",
+    "make"
+]
+
+install = [
+    "make install"
+]
+
+[dependencies]
+extra-cmake-modules = "6.11.0"
+qt6 = "6.8.3"

@@ -1,0 +1,21 @@
+[package]
+name = "plasma-wayland-protocols"
+version = "1.16.0"
+author = "KDE Community"
+type = "curl"
+src = ["https://download.kde.org/stable/plasma-wayland-protocols/plasma-wayland-protocols-1.16.0.tar.xz"]
+
+[build]
+compile = [
+    "mkdir build && cd build",
+    "cmake -D CMAKE_INSTALL_PREFIX=/usr ..",
+    "make"
+]
+
+[install]
+install = [
+    "make install"
+]
+
+[dependencies]
+extra-cmake-modules = "6.11.0"

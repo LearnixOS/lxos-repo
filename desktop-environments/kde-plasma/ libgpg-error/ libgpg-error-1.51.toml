@@ -1,0 +1,18 @@
+[package]
+name = "libgpg-error"
+version = "1.51"
+author = "GnuPG Project"
+type = "curl"
+src = ["https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.51.tar.bz2"]
+
+[build]
+compile = [
+    "./configure --prefix=/usr",
+    "make"
+]
+
+[install]
+install = [
+    "make install",
+    "install -v -m644 -D README /usr/share/doc/libgpg-error-1.51/README"
+]

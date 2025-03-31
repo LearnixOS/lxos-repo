@@ -1,0 +1,40 @@
+[package]
+name = "kf6"
+version = "6.11.0"
+author = "KDE Community"
+type = "curl"
+src = ["https://download.kde.org/stable/frameworks/6.11/"]
+
+[build]
+compile = [
+    # Download all packages
+    "wget -r -nH -nd -A '*.xz' -np https://download.kde.org/stable/frameworks/6.11/",
+    # Create MD5 list (simplified representation of the cat command)
+    "echo '9359cfb89031abeeff8616d73e161415  attica-6.11.0.tar.xz' > frameworks-6.11.0.md5",
+    "echo '647b2f9cfd55930e86ebb8c1734df140  kapidox-6.11.0.tar.xz' >> frameworks-6.11.0.md5",
+    "echo '20c3fbf44d196d578bf9b76d0631a1ad  karchive-6.11.0.tar.xz' >> frameworks-6.11.0.md5",
+    "as_root() { if [ $EUID = 0 ]; then $@; elif [ -x /usr/bin/sudo ]; then sudo $@; else su -c \\\"$@\\\"; fi; }; export -f as_root",
+    "bash -e -c 'while read -r line; do if $(echo $line | grep -E -q \"^ *$|^#\"); then continue; fi; file=$(echo $line | cut -d\" \" -f2); pkg=$(echo $file | sed \"s|^.*/||\"); packagedir=$(echo $pkg | sed \"s|\\.tar.*||\"); name=$(echo $pkg | sed \"s|-6.*$||\"); tar -xf $file; pushd $packagedir; if [ \"$name\" = \"kapidox\" ]; then pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD; as_root pip3 install --no-index --find-links dist --no-user kapidox; popd; rm -rf $packagedir; continue; fi; mkdir build; cd build; cmake -D CMAKE_INSTALL_PREFIX=/usr -D CMAKE_INSTALL_LIBEXECDIR=libexec -D CMAKE_PREFIX_PATH=$QT6DIR -D CMAKE_SKIP_INSTALL_RPATH=ON -D CMAKE_BUILD_TYPE=Release -D BUILD_TESTING=OFF -W no-dev ..; make; as_root make install; popd; as_root rm -rf $packagedir; as_root /sbin/ldconfig; done < frameworks-6.11.0.md5; exit'"
+]
+
+install = [
+    "rm -rf /usr/lib/systemd"  # Remove useless systemd units
+]
+
+[dependencies]
+extra-cmake-modules = "6.11.0"
+breeze-icons = "6.11.0"
+docbook-xml = "4.5"
+docbook-xsl-nons = "1.79.2"
+libcanberra = "0.30"
+libgcrypt = "1.11.0"
+libical = "3.0.20"
+libxslt = "1.1.43"
+lmdb = "0.9.31"
+qca = "2.3.10"
+qrencode = "4.1.1"
+plasma-wayland-protocols = "1.16.0"
+pyyaml = "6.0.2"
+shared-mime-info = "2.4"
+uri = "5.31"
+wget = "1.25.0"

@@ -1,0 +1,24 @@
+[package]
+name = "libxml2"
+version = "2.13.6"
+author = "GNOME Project"
+type = "curl"
+src = [
+    "https://download.gnome.org/sources/libxml2/2.13/libxml2-2.13.6.tar.xz",
+    # Optional test suite
+    "https://www.w3.org/XML/Test/xmlts20130923.tar.gz"
+]
+
+[build]
+compile = [
+    "./configure --prefix=/usr --sysconfdir=/etc --disable-static --with-history --with-icu PYTHON=/usr/bin/python3 --docdir=/usr/share/doc/libxml2-2.13.6",
+    "tar xf ../xmlts20130923.tar.gz || true",  # Optional test suite extraction
+    "make"
+]
+
+[install]
+install = [
+    "make install",
+    "rm -vf /usr/lib/libxml2.la",
+    "sed '/libs=/s/xml2.*/xml2\"/' -i /usr/bin/xml2-config"
+]

@@ -1,0 +1,18 @@
+[package]
+name = "lmdb"
+version = "0.9.31"
+author = "LMDB Project"
+type = "curl"
+src = ["https://github.com/LMDB/lmdb/archive/LMDB_0.9.31.tar.gz"]
+
+[build]
+compile = [
+    "cd libraries/liblmdb",
+    "make",
+    "sed -i 's| liblmdb.a||' Makefile"
+]
+
+[install]
+install = [
+    "make prefix=/usr install"
+]

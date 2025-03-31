@@ -1,0 +1,44 @@
+[package]
+name = "qt6"
+version = "6.8.3"
+author = "The Qt Company"
+type = "curl"
+src = [
+    "https://download.qt.io/archive/qt/6.8/6.8.3/single/qt-everywhere-src-6.8.3.tar.xz",
+    "https://www.linuxfromscratch.org/patches/blfs/svn/qt-everywhere-src-6.8.3-protobuf_30-1.patch"  # Required if Protobuf-30.2 is installed
+]
+
+[build]
+compile = [
+    "patch -Np1 -i ../qt-everywhere-src-6.8.3-protobuf_30-1.patch || true",
+    "if [ \"$(uname -m)\" == \"i686\" ]; then sed -e '/^#elif defined(Q_CC_GNU_ONLY)/s/.*/& \\&\\& 0/' -i qtbase/src/corelib/global/qtypes.h; fi",
+    "./configure -prefix /opt/qt6 \
+                -sysconfdir /etc/xdg \
+                -dbus-linked \
+                -openssl-linked \
+                -system-sqlite \
+                -nomake examples \
+                -no-rpath \
+                -syslog \
+                -skip qt3d \
+                -skip qtquick3dphysics \
+                -skip qtwebengine",
+    "ninja"
+]
+
+install = [
+    "ninja install",
+    "find /opt/qt6/ -name \\*.prl -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d' {} \\;",
+    "pushd qttools/src && install -v -Dm644 assistant/assistant/images/assistant-128.png /usr/share/pixmaps/assistant-qt6.png && install -v -Dm644 designer/src/designer/images/designer.png /usr/share/pixmaps/designer-qt6.png && install -v -Dm644 linguist/linguist/images/icons/linguist-128-32.png /usr/share/pixmaps/linguist-qt6.png && install -v -Dm644 qdbus/qdbusviewer/images/qdbusviewer-128.png /usr/share/pixmaps/qdbusviewer-qt6.png && popd",
+    "echo '[Desktop Entry]\nName=Qt6 Assistant\nComment=Shows Qt6 documentation and examples\nExec=/opt/qt6/bin/assistant\nIcon=assistant-qt6.png\nTerminal=false\nEncoding=UTF-8\nType=Application\nCategories=Qt;Development;Documentation;' > /usr/share/applications/assistant-qt6.desktop",
+    "echo '[Desktop Entry]\nName=Qt6 Designer\nGenericName=Interface Designer\nComment=Design GUIs for Qt6 applications\nExec=/opt/qt6/bin/designer\nIcon=designer-qt6.png\nMimeType=application/x-designer;\nTerminal=false\nEncoding=UTF-8\nType=Application\nCategories=Qt;Development;' > /usr/share/applications/designer-qt6.desktop",
+    "echo '[Desktop Entry]\nName=Qt6 Linguist\nComment=Add translations to Qt6 applications\nExec=/opt/qt6/bin/linguist\nIcon=linguist-qt6.png\nMimeType=text/vnd.trolltech.linguist;application/x-linguist;\nTerminal=false\nEncoding=UTF-8\nType=Application\nCategories=Qt;Development;' > /usr/share/applications/linguist-qt6.desktop",
+    "echo '[Desktop Entry]\nName=Qt6 QDbusViewer\nGenericName=D-Bus Debugger\nComment=Debug D-Bus applications\nExec=/opt/qt6/bin/qdbusviewer\nIcon=qdbusviewer-qt6.png\nTerminal=false\nEncoding=UTF-8\nType=Application\nCategories=Qt;Development;Debugger;' > /usr/share/applications/qdbusviewer-qt6.desktop",
+    "echo 'Defaults env_keep += QT6DIR' > /etc/sudoers.d/qt",
+    "echo '# Begin Qt addition\n/opt/qt6/lib\n# End Qt addition' >> /etc/ld.so.conf",
+    "ldconfig",
+    "echo '# Begin /etc/profile.d/qt6.sh\nQT6DIR=/opt/qt6\npathappend $QT6DIR/bin PATH\npathappend $QT6DIR/lib/pkgconfig PKG_CONFIG_PATH\nexport QT6DIR\n# End /etc/profile.d/qt6.sh' > /etc/profile.d/qt6.sh"
+]
+
+[dependencies]
+xorg-libs = "*"
