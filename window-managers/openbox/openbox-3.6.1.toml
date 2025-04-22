@@ -1,0 +1,22 @@
+[package]
+name = "openbox"
+version = "3.6.1"
+author = "Openbox Developers"
+description = "A highly configurable desktop window manager with extensive standards support."
+type = "curl"
+src = ["http://openbox.org/dist/openbox/openbox-3.6.1.tar.gz"]
+
+[build]
+configure_options = [
+    "--prefix=/usr",
+    "--sysconfdir=/etc",
+    "--disable-static",
+    "--docdir=/usr/share/doc/openbox-3.6.1"
+]
+install_commands = [
+    "make",
+    "make install"
+]
+
+[dependencies]
+pango = "*"
