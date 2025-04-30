@@ -1,0 +1,66 @@
+[package]
+name = "firefox"
+version = "128.9.0esr"
+author = "Mozilla"
+type = "curl"
+src = ["https://ftp.mozilla.org/pub/firefox/releases/128.9.0esr/source/firefox-128.9.0esr.source.tar.xz"]
+
+[build]
+compile = [
+    "tar -xf firefox-128.9.0esr.source.tar.xz",
+    "cd firefox-128.9.0",
+    "cat > mozconfig << \"EOF\"",
+    "ac_add_options --disable-necko-wifi",
+    "ac_add_options --with-google-location-service-api-keyfile=$PWD/google-key",
+    "ac_add_options --with-system-icu",
+    "ac_add_options --with-system-libevent",
+    "ac_add_options --with-system-libvpx",
+    "ac_add_options --with-system-nspr",
+    "ac_add_options --with-system-nss",
+    "ac_add_options --with-system-webp",
+    "ac_add_options --enable-official-branding",
+    "ac_add_options --disable-debug-symbols",
+    "ac_add_options --prefix=/usr",
+    "ac_add_options --enable-application=browser",
+    "ac_add_options --disable-crashreporter",
+    "ac_add_options --disable-updater",
+    "ac_add_options --disable-tests",
+    "ac_add_options --enable-rust-simd",
+    "ac_add_options --enable-system-ffi",
+    "ac_add_options --enable-system-pixman",
+    "ac_add_options --with-system-jpeg",
+    "ac_add_options --with-system-png",
+    "ac_add_options --with-system-zlib",
+    "[ $(uname -m) != x86_64 ] && ac_add_options --disable-sandbox",
+    "ac_add_options --without-wasm-sandboxed-libraries",
+    "unset MOZ_TELEMETRY_REPORTING",
+    "mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-build-dir",
+    "EOF",
+    "export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none",
+    "export MOZBUILD_STATE_PATH=${PWD}/mozbuild",
+    "./mach build"
+]
+
+install = [
+    "export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none",
+    "./mach install",
+    "unset MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE",
+    "unset MOZBUILD_STATE_PATH"
+]
+
+[dependencies]
+cbindgen = "*"
+gtk3 = "*"
+libnotify = "*"
+libarchive = "*"
+llvm = "*"
+nodejs = "*"
+pulseaudio = "*"
+python = "*"
+startup-notification = "*"
+icu = "*"
+libevent = "*"
+libvpx = "*"
+libwebp = "*"
+nasm = "*"
+nss = "*"
